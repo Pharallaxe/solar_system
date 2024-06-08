@@ -1,0 +1,249 @@
+/****************************************
+ - STYLES DE BASE
+****************************************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111111;
+    font-family: Arial, sans-serif;
+    color: #aaa;
+}
+
+/* Fenêtre de contrôle */
+.controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 60px;
+    width: 70px;
+    background: #111111;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    padding: 15px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, width 0.3s ease-in-out 0.3s;
+
+    &.active {
+        height: 300px;
+        width: 200px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
+    }
+}
+
+/* Styles de base pour le bouton hamburger */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    min-width: 40px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    z-index: 20;
+
+    .line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+        position: absolute;
+        border-radius: 2px;
+    }
+
+    .line1 {
+        top: 0;
+    }
+
+    .line2 {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .line3 {
+        top: 100%;
+        transform: translateY(-100%);
+    }
+
+    &.active {
+        .line1 {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .line2 {
+            opacity: 0;
+        }
+
+        .line3 {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}
+
+h2 {
+    margin-left: 25px;
+}
+
+/* Alignement des étiquettes et des inputs */
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &:first-of-type {
+        margin-bottom: 20px;
+    }
+
+    label {
+        flex: 1;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    input[type="checkbox"] {
+        appearance: none; /* Supprime le style par défaut */
+        -webkit-appearance: none; /* Pour Safari/Chrome */
+        -moz-appearance: none; /* Pour Firefox */
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: 2px solid #e2e2e2;
+        border-radius: 50%;
+        background-color: transparent;
+        position: relative;
+        display: inline-block;
+
+        &:checked {
+            background-color: #111111;
+        }
+    
+        &:checked::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: #e2e2e2;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+/****************************************
+ - CONTENEUR
+****************************************/
+
+.solar-system {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+/****************************************
+ - ASTRE SOLEIL
+****************************************/
+
+.sun, .orbit, .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sun {
+    width: 50px;
+    height: 50px;
+    background-color: #FFA500;
+}
+
+/****************************************
+ - ORBITES DE PLANETE
+****************************************/
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+
+/****************************************
+ - STYLE PLANETE
+****************************************/
+
+.planet {
+    transform-origin: 0 0;
+}
+
+// Définir un tableau avec les propriétés des planètes
+$planets: (
+    //    planète,   orbite,   taille,     couleur,  rotation
+    (mercury, 40px, 6px, #aaa, 4s),
+    (venus, 80px, 12px, #f5deb3, 10s),
+    (earth, 120px, 14px, #3e82f7, 16s),
+    (mars, 160px, 10px, #d04b2d, 32s),
+    (jupiter, 280px, 30px, #f4a460, 196s),
+    (saturn, 400px, 25px, #deb887, 490s),
+    (uranus, 520px, 22px, #8a2be2, 1380s),
+    (moon, 15px, 3px, #aaa, 2s),
+    (io, 20px, 4px, #aaa, 2s),
+    (europe, 30px, 6px, #aaa, 4s),
+    (ganymede, 40px, 8px, #aaa, 7s),
+    (callisto, 48px, 4px, #aaa, 11s),
+);
+
+// Générer les styles pour chaque planète
+@each $planet in $planets {
+    $name: nth($planet, 1);
+    $orbite : nth($planet, 2);
+    $size: nth($planet, 3);
+    $color: nth($planet, 4);
+    $duration: nth($planet, 5);
+
+    .#{$name}-orbit {
+        width: calc($orbite * 2);
+        height: calc($orbite * 2);
+    }
+
+    .#{$name} {
+        width: $size;
+        height: $size;
+        background-color: $color;
+        animation: rotate-#{$name} $duration linear infinite;
+    }
+
+    @keyframes rotate-#{$name} {
+        from {
+            transform: rotate(0deg) translate(calc($orbite - 50%));
+        }
+
+        to {
+            transform: rotate(360deg) translate(calc($orbite - 50%));
+        }
+
+    }
+}
