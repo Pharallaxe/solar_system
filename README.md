@@ -6,7 +6,7 @@
 Ce projet représente une visualisation simplifiée du système solaire en HTML et CSS. Il permet d'afficher les planètes principales avec la possibilité de les montrer ou de les cacher à l'aide de cases à cocher.
 
 ## Licence
-Ce projet est sous licence Apache.
+Ce projet est sous licence [Apache](./LICENSE).
 
 ## Contenu
 
