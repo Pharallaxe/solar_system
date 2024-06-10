@@ -37,7 +37,7 @@ body {
   transition: height 0.3s ease-in-out, width 0.3s ease-in-out 0.3s;
 }
 .controls.active {
-  height: 300px;
+  height: 500px;
   width: 200px;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
 }
@@ -98,16 +98,20 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: dashed 1px;
 }
 .group:first-of-type {
   margin-bottom: 20px;
+  border-bottom: none;
+  padding: 0;
 }
 .group label {
   flex: 1;
   margin-right: 10px;
   font-size: 20px;
 }
-.group input[type=checkbox] {
+.group input[type=range] input[type=checkbox] {
   appearance: none; /* Supprime le style par défaut */
   -webkit-appearance: none; /* Pour Safari/Chrome */
   -moz-appearance: none; /* Pour Firefox */
@@ -120,10 +124,10 @@ h2 {
   position: relative;
   display: inline-block;
 }
-.group input[type=checkbox]:checked {
+.group input[type=range] input[type=checkbox]:checked {
   background-color: #111111;
 }
-.group input[type=checkbox]:checked::before {
+.group input[type=range] input[type=checkbox]:checked::before {
   content: "";
   display: block;
   width: 12px;
@@ -134,6 +138,12 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.group-range {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
 }
 
 /****************************************
@@ -179,6 +189,10 @@ h2 {
   transform-origin: 0 0;
 }
 
+:root {
+  --revolution-temps: 4s;
+}
+
 .mercury-orbit {
   width: 80px;
   height: 80px;
@@ -188,7 +202,7 @@ h2 {
   width: 6px;
   height: 6px;
   background-color: #aaa;
-  animation: rotate-mercury 4s linear infinite;
+  animation: rotate-mercury calc(var(--revolution-temps) * 1) linear infinite;
 }
 
 @keyframes rotate-mercury {
@@ -208,7 +222,7 @@ h2 {
   width: 12px;
   height: 12px;
   background-color: #f5deb3;
-  animation: rotate-venus 10s linear infinite;
+  animation: rotate-venus calc(var(--revolution-temps) * 2.5) linear infinite;
 }
 
 @keyframes rotate-venus {
@@ -228,7 +242,7 @@ h2 {
   width: 14px;
   height: 14px;
   background-color: #3e82f7;
-  animation: rotate-earth 16s linear infinite;
+  animation: rotate-earth calc(var(--revolution-temps) * 4) linear infinite;
 }
 
 @keyframes rotate-earth {
@@ -248,7 +262,7 @@ h2 {
   width: 10px;
   height: 10px;
   background-color: #d04b2d;
-  animation: rotate-mars 32s linear infinite;
+  animation: rotate-mars calc(var(--revolution-temps) * 8) linear infinite;
 }
 
 @keyframes rotate-mars {
@@ -268,7 +282,7 @@ h2 {
   width: 30px;
   height: 30px;
   background-color: #f4a460;
-  animation: rotate-jupiter 196s linear infinite;
+  animation: rotate-jupiter calc(var(--revolution-temps) * 49) linear infinite;
 }
 
 @keyframes rotate-jupiter {
@@ -288,7 +302,7 @@ h2 {
   width: 25px;
   height: 25px;
   background-color: #deb887;
-  animation: rotate-saturn 490s linear infinite;
+  animation: rotate-saturn calc(var(--revolution-temps) * 122.5) linear infinite;
 }
 
 @keyframes rotate-saturn {
@@ -308,7 +322,7 @@ h2 {
   width: 22px;
   height: 22px;
   background-color: #8a2be2;
-  animation: rotate-uranus 1380s linear infinite;
+  animation: rotate-uranus calc(var(--revolution-temps) * 345) linear infinite;
 }
 
 @keyframes rotate-uranus {
@@ -328,7 +342,7 @@ h2 {
   width: 3px;
   height: 3px;
   background-color: #aaa;
-  animation: rotate-moon 2s linear infinite;
+  animation: rotate-moon calc(var(--revolution-temps) * 0.5) linear infinite;
 }
 
 @keyframes rotate-moon {
@@ -348,7 +362,7 @@ h2 {
   width: 4px;
   height: 4px;
   background-color: #aaa;
-  animation: rotate-io 2s linear infinite;
+  animation: rotate-io calc(var(--revolution-temps) * 0.5) linear infinite;
 }
 
 @keyframes rotate-io {
@@ -368,7 +382,7 @@ h2 {
   width: 6px;
   height: 6px;
   background-color: #aaa;
-  animation: rotate-europe 4s linear infinite;
+  animation: rotate-europe calc(var(--revolution-temps) * 1) linear infinite;
 }
 
 @keyframes rotate-europe {
@@ -388,7 +402,7 @@ h2 {
   width: 8px;
   height: 8px;
   background-color: #aaa;
-  animation: rotate-ganymede 7s linear infinite;
+  animation: rotate-ganymede calc(var(--revolution-temps) * 1.75) linear infinite;
 }
 
 @keyframes rotate-ganymede {
@@ -408,7 +422,7 @@ h2 {
   width: 4px;
   height: 4px;
   background-color: #aaa;
-  animation: rotate-callisto 11s linear infinite;
+  animation: rotate-callisto calc(var(--revolution-temps) * 2.75) linear infinite;
 }
 
 @keyframes rotate-callisto {
@@ -418,6 +432,4 @@ h2 {
   to {
     transform: rotate(360deg) translate(calc(48px - 50%));
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

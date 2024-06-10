@@ -34,4 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // pour s'assurer que l'état initial est appliqué
         checkbox.dispatchEvent(new Event('change'));
     });
+
+    const rootStyle = document.documentElement.style;
+    const slider = document.getElementById('rapidity');
+    const rapidityHtml = document.querySelector('label[for="rapidity"]');
+
+    // Mettre à jour la variable CSS lorsque le slider change
+    slider.addEventListener('input', function() {
+        // Calculez la nouvelle durée en secondes
+        const newTime = `${this.value}s`;
+        // Mettez à jour la variable CSS
+        rootStyle.setProperty('--revolution-temps', newTime);
+        rapidityHtml.innerText = `Rapidité (${this.value})`
+    });
 });

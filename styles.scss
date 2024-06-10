@@ -37,7 +37,7 @@ body {
     transition: height 0.3s ease-in-out, width 0.3s ease-in-out 0.3s;
 
     &.active {
-        height: 300px;
+        height: 500px;
         width: 200px;
         transition: width 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
     }
@@ -108,9 +108,13 @@ h2 {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: dashed 1px;
 
     &:first-of-type {
         margin-bottom: 20px;
+        border-bottom: none;
+        padding: 0;
     }
 
     label {
@@ -118,6 +122,8 @@ h2 {
         margin-right: 10px;
         font-size: 20px;
     }
+
+    input[type="range"]
 
     input[type="checkbox"] {
         appearance: none; /* Supprime le style par défaut */
@@ -151,6 +157,11 @@ h2 {
     }
 }
 
+.group-range {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+}
 
 /****************************************
  - CONTENEUR
@@ -200,21 +211,25 @@ h2 {
     transform-origin: 0 0;
 }
 
+:root {
+    --revolution-temps: 4s;
+}
+
 // Définir un tableau avec les propriétés des planètes
 $planets: (
     //    planète,   orbite,   taille,     couleur,  rotation
-    (mercury, 40px, 6px, #aaa, 4s),
-    (venus, 80px, 12px, #f5deb3, 10s),
-    (earth, 120px, 14px, #3e82f7, 16s),
-    (mars, 160px, 10px, #d04b2d, 32s),
-    (jupiter, 280px, 30px, #f4a460, 196s),
-    (saturn, 400px, 25px, #deb887, 490s),
-    (uranus, 520px, 22px, #8a2be2, 1380s),
-    (moon, 15px, 3px, #aaa, 2s),
-    (io, 20px, 4px, #aaa, 2s),
-    (europe, 30px, 6px, #aaa, 4s),
-    (ganymede, 40px, 8px, #aaa, 7s),
-    (callisto, 48px, 4px, #aaa, 11s),
+    (mercury, 40px, 6px, #aaa, calc(var(--revolution-temps) * 1)),   // 4s
+    (venus, 80px, 12px, #f5deb3, calc(var(--revolution-temps) * 2.5)), // 10s
+    (earth, 120px, 14px, #3e82f7, calc(var(--revolution-temps) * 4)),  // 16s
+    (mars, 160px, 10px, #d04b2d, calc(var(--revolution-temps) * 8)),   // 32s
+    (jupiter, 280px, 30px, #f4a460, calc(var(--revolution-temps) * 49)), // 196s
+    (saturn, 400px, 25px, #deb887, calc(var(--revolution-temps) * 122.5)), // 490s
+    (uranus, 520px, 22px, #8a2be2, calc(var(--revolution-temps) * 345)), // 1380s
+    (moon, 15px, 3px, #aaa, calc(var(--revolution-temps) * 0.5)),   // 2s
+    (io, 20px, 4px, #aaa, calc(var(--revolution-temps) * 0.5)),     // 2s
+    (europe, 30px, 6px, #aaa, calc(var(--revolution-temps) * 1)),   // 4s
+    (ganymede, 40px, 8px, #aaa, calc(var(--revolution-temps) * 1.75)), // 7s
+    (callisto, 48px, 4px, #aaa, calc(var(--revolution-temps) * 2.75))  // 11s
 );
 
 // Générer les styles pour chaque planète
