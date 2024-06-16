@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mettre à jour la variable CSS lorsque le slider change
     slider.addEventListener('input', function() {
         // Calculez la nouvelle durée en secondes
-        const newTime = `${this.value}s`;
+        const newTime = `${10/this.value}s`;
         // Mettez à jour la variable CSS
         rootStyle.setProperty('--revolution-temps', newTime);
         rapidityHtml.innerText = `Rapidité (${this.value})`
