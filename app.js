@@ -47,4 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
         rootStyle.setProperty('--revolution-temps', newTime);
         rapidityHtml.innerText = `Rapidité (${this.value})`
     });
+
+
+    const asteroidNumber = 350; // Remplacez ce nombre par le nombre d'astéroïdes souhaité
+
+    function addAsteroidsToBelt(asteroidNumber) {
+        const beltOrbit = document.querySelector('.orbit.belt-orbit');
+        
+        for (let i = 0; i < asteroidNumber; i++) {
+            const asteroid = document.createElement('div');
+            asteroid.classList.add('asteroid');
+            beltOrbit.appendChild(asteroid);
+        }
+    }
+    
+    addAsteroidsToBelt(asteroidNumber);
+
 });

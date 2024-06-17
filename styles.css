@@ -206,11 +206,20 @@ h2 {
 }
 
 @keyframes rotate-mercury {
-  from {
-    transform: rotate(0deg) translate(calc(40px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(40px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(40px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(40px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(40px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(40px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(40px - 50%));
   }
 }
 .venus-orbit {
@@ -226,11 +235,20 @@ h2 {
 }
 
 @keyframes rotate-venus {
-  from {
-    transform: rotate(0deg) translate(calc(80px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(80px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(80px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(80px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(80px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(80px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(80px - 50%));
   }
 }
 .earth-orbit {
@@ -246,11 +264,20 @@ h2 {
 }
 
 @keyframes rotate-earth {
-  from {
-    transform: rotate(0deg) translate(calc(120px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(120px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(120px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(120px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(120px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(120px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(120px - 50%));
   }
 }
 .mars-orbit {
@@ -266,11 +293,49 @@ h2 {
 }
 
 @keyframes rotate-mars {
-  from {
-    transform: rotate(0deg) translate(calc(160px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(160px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(160px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(160px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(160px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(160px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(160px - 50%));
+  }
+}
+.belt-orbit {
+  width: 400px;
+  height: 400px;
+}
+
+.belt {
+  width: 5px;
+  height: 5px;
+  background-color: #00a060;
+  animation: rotate-belt calc(var(--revolution-temps) * 25) linear infinite;
+}
+
+@keyframes rotate-belt {
+  0% {
+    transform: rotate(0deg) translateX(calc(200px - 50%));
+  }
+  25% {
+    transform: rotate(90deg) translateX(calc(200px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(200px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(200px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(200px - 50%));
   }
 }
 .jupiter-orbit {
@@ -286,11 +351,20 @@ h2 {
 }
 
 @keyframes rotate-jupiter {
-  from {
-    transform: rotate(0deg) translate(calc(280px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(280px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(280px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(280px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(280px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(280px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(280px - 50%));
   }
 }
 .saturn-orbit {
@@ -306,11 +380,20 @@ h2 {
 }
 
 @keyframes rotate-saturn {
-  from {
-    transform: rotate(0deg) translate(calc(400px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(400px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(400px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(400px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(400px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(400px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(400px - 50%));
   }
 }
 .uranus-orbit {
@@ -326,11 +409,20 @@ h2 {
 }
 
 @keyframes rotate-uranus {
-  from {
-    transform: rotate(0deg) translate(calc(520px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(520px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(520px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(520px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(520px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(520px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(520px - 50%));
   }
 }
 .moon-orbit {
@@ -346,11 +438,20 @@ h2 {
 }
 
 @keyframes rotate-moon {
-  from {
-    transform: rotate(0deg) translate(calc(15px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(15px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(15px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(15px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(15px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(15px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(15px - 50%));
   }
 }
 .io-orbit {
@@ -366,11 +467,20 @@ h2 {
 }
 
 @keyframes rotate-io {
-  from {
-    transform: rotate(0deg) translate(calc(20px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(20px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(20px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(20px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(20px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(20px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(20px - 50%));
   }
 }
 .europe-orbit {
@@ -386,11 +496,20 @@ h2 {
 }
 
 @keyframes rotate-europe {
-  from {
-    transform: rotate(0deg) translate(calc(30px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(30px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(30px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(30px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(30px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(30px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(30px - 50%));
   }
 }
 .ganymede-orbit {
@@ -406,11 +525,20 @@ h2 {
 }
 
 @keyframes rotate-ganymede {
-  from {
-    transform: rotate(0deg) translate(calc(40px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(40px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(40px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(40px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(40px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(40px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(40px - 50%));
   }
 }
 .callisto-orbit {
@@ -426,10 +554,5283 @@ h2 {
 }
 
 @keyframes rotate-callisto {
-  from {
-    transform: rotate(0deg) translate(calc(48px - 50%));
+  0% {
+    transform: rotate(0deg) translateX(calc(48px - 50%));
   }
-  to {
-    transform: rotate(360deg) translate(calc(48px - 50%));
+  25% {
+    transform: rotate(90deg) translateX(calc(48px - 50%));
+  }
+  50% {
+    transform: rotate(180deg) translateX(calc(48px - 50%));
+  }
+  75% {
+    transform: rotate(270deg) translateX(calc(48px - 50%));
+  }
+  100% {
+    transform: rotate(360deg) translateX(calc(48px - 50%));
+  }
+}
+/****************************************
+ - CEINTURE D'ASTÉROÏDES
+****************************************/
+.asteroid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transform-origin: 0 0;
+}
+
+.asteroid:nth-child(1) {
+  width: 2px;
+  height: 2px;
+  animation: r-1 39.7s linear infinite;
+  transform: rotate(278deg) translateX(208px);
+}
+
+@keyframes r-1 {
+  0% {
+    transform: rotate(278) translateX(208px);
+  }
+  100% {
+    transform: rotate(638deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(2) {
+  width: 4px;
+  height: 4px;
+  animation: r-2 36.1s linear infinite;
+  transform: rotate(76deg) translateX(198px);
+}
+
+@keyframes r-2 {
+  0% {
+    transform: rotate(76) translateX(198px);
+  }
+  100% {
+    transform: rotate(436deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(3) {
+  width: 3px;
+  height: 3px;
+  animation: r-3 40.4s linear infinite;
+  transform: rotate(324deg) translateX(207px);
+}
+
+@keyframes r-3 {
+  0% {
+    transform: rotate(324) translateX(207px);
+  }
+  100% {
+    transform: rotate(684deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(4) {
+  width: 2px;
+  height: 2px;
+  animation: r-4 37.8s linear infinite;
+  transform: rotate(267deg) translateX(203px);
+}
+
+@keyframes r-4 {
+  0% {
+    transform: rotate(267) translateX(203px);
+  }
+  100% {
+    transform: rotate(627deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  animation: r-5 41.1s linear infinite;
+  transform: rotate(165deg) translateX(191px);
+}
+
+@keyframes r-5 {
+  0% {
+    transform: rotate(165) translateX(191px);
+  }
+  100% {
+    transform: rotate(525deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(6) {
+  width: 3px;
+  height: 3px;
+  animation: r-6 16.4s linear infinite;
+  transform: rotate(140deg) translateX(199px);
+}
+
+@keyframes r-6 {
+  0% {
+    transform: rotate(140) translateX(199px);
+  }
+  100% {
+    transform: rotate(500deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(7) {
+  width: 3px;
+  height: 3px;
+  animation: r-7 23.3s linear infinite;
+  transform: rotate(214deg) translateX(208px);
+}
+
+@keyframes r-7 {
+  0% {
+    transform: rotate(214) translateX(208px);
+  }
+  100% {
+    transform: rotate(574deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(8) {
+  width: 3px;
+  height: 3px;
+  animation: r-8 39.8s linear infinite;
+  transform: rotate(343deg) translateX(195px);
+}
+
+@keyframes r-8 {
+  0% {
+    transform: rotate(343) translateX(195px);
+  }
+  100% {
+    transform: rotate(703deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(9) {
+  width: 4px;
+  height: 4px;
+  animation: r-9 35s linear infinite;
+  transform: rotate(23deg) translateX(195px);
+}
+
+@keyframes r-9 {
+  0% {
+    transform: rotate(23) translateX(195px);
+  }
+  100% {
+    transform: rotate(383deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(10) {
+  width: 3px;
+  height: 3px;
+  animation: r-10 22.3s linear infinite;
+  transform: rotate(208deg) translateX(198px);
+}
+
+@keyframes r-10 {
+  0% {
+    transform: rotate(208) translateX(198px);
+  }
+  100% {
+    transform: rotate(568deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(11) {
+  width: 3px;
+  height: 3px;
+  animation: r-11 16.8s linear infinite;
+  transform: rotate(36deg) translateX(196px);
+}
+
+@keyframes r-11 {
+  0% {
+    transform: rotate(36) translateX(196px);
+  }
+  100% {
+    transform: rotate(396deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(12) {
+  width: 2px;
+  height: 2px;
+  animation: r-12 41.6s linear infinite;
+  transform: rotate(296deg) translateX(198px);
+}
+
+@keyframes r-12 {
+  0% {
+    transform: rotate(296) translateX(198px);
+  }
+  100% {
+    transform: rotate(656deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(13) {
+  width: 3px;
+  height: 3px;
+  animation: r-13 35.5s linear infinite;
+  transform: rotate(129deg) translateX(193px);
+}
+
+@keyframes r-13 {
+  0% {
+    transform: rotate(129) translateX(193px);
+  }
+  100% {
+    transform: rotate(489deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(14) {
+  width: 3px;
+  height: 3px;
+  animation: r-14 19.2s linear infinite;
+  transform: rotate(11deg) translateX(191px);
+}
+
+@keyframes r-14 {
+  0% {
+    transform: rotate(11) translateX(191px);
+  }
+  100% {
+    transform: rotate(371deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(15) {
+  width: 4px;
+  height: 4px;
+  animation: r-15 44.8s linear infinite;
+  transform: rotate(186deg) translateX(210px);
+}
+
+@keyframes r-15 {
+  0% {
+    transform: rotate(186) translateX(210px);
+  }
+  100% {
+    transform: rotate(546deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(16) {
+  width: 3px;
+  height: 3px;
+  animation: r-16 35.7s linear infinite;
+  transform: rotate(141deg) translateX(191px);
+}
+
+@keyframes r-16 {
+  0% {
+    transform: rotate(141) translateX(191px);
+  }
+  100% {
+    transform: rotate(501deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(17) {
+  width: 4px;
+  height: 4px;
+  animation: r-17 29.7s linear infinite;
+  transform: rotate(4deg) translateX(207px);
+}
+
+@keyframes r-17 {
+  0% {
+    transform: rotate(4) translateX(207px);
+  }
+  100% {
+    transform: rotate(364deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(18) {
+  width: 2px;
+  height: 2px;
+  animation: r-18 34.8s linear infinite;
+  transform: rotate(321deg) translateX(196px);
+}
+
+@keyframes r-18 {
+  0% {
+    transform: rotate(321) translateX(196px);
+  }
+  100% {
+    transform: rotate(681deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(19) {
+  width: 4px;
+  height: 4px;
+  animation: r-19 36.4s linear infinite;
+  transform: rotate(114deg) translateX(192px);
+}
+
+@keyframes r-19 {
+  0% {
+    transform: rotate(114) translateX(192px);
+  }
+  100% {
+    transform: rotate(474deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(20) {
+  width: 4px;
+  height: 4px;
+  animation: r-20 16.7s linear infinite;
+  transform: rotate(311deg) translateX(205px);
+}
+
+@keyframes r-20 {
+  0% {
+    transform: rotate(311) translateX(205px);
+  }
+  100% {
+    transform: rotate(671deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(21) {
+  width: 4px;
+  height: 4px;
+  animation: r-21 17.5s linear infinite;
+  transform: rotate(156deg) translateX(209px);
+}
+
+@keyframes r-21 {
+  0% {
+    transform: rotate(156) translateX(209px);
+  }
+  100% {
+    transform: rotate(516deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(22) {
+  width: 2px;
+  height: 2px;
+  animation: r-22 43s linear infinite;
+  transform: rotate(138deg) translateX(196px);
+}
+
+@keyframes r-22 {
+  0% {
+    transform: rotate(138) translateX(196px);
+  }
+  100% {
+    transform: rotate(498deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(23) {
+  width: 3px;
+  height: 3px;
+  animation: r-23 18.4s linear infinite;
+  transform: rotate(84deg) translateX(194px);
+}
+
+@keyframes r-23 {
+  0% {
+    transform: rotate(84) translateX(194px);
+  }
+  100% {
+    transform: rotate(444deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(24) {
+  width: 4px;
+  height: 4px;
+  animation: r-24 23.7s linear infinite;
+  transform: rotate(247deg) translateX(198px);
+}
+
+@keyframes r-24 {
+  0% {
+    transform: rotate(247) translateX(198px);
+  }
+  100% {
+    transform: rotate(607deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(25) {
+  width: 4px;
+  height: 4px;
+  animation: r-25 29.7s linear infinite;
+  transform: rotate(293deg) translateX(210px);
+}
+
+@keyframes r-25 {
+  0% {
+    transform: rotate(293) translateX(210px);
+  }
+  100% {
+    transform: rotate(653deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(26) {
+  width: 2px;
+  height: 2px;
+  animation: r-26 36.7s linear infinite;
+  transform: rotate(9deg) translateX(203px);
+}
+
+@keyframes r-26 {
+  0% {
+    transform: rotate(9) translateX(203px);
+  }
+  100% {
+    transform: rotate(369deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(27) {
+  width: 4px;
+  height: 4px;
+  animation: r-27 39.6s linear infinite;
+  transform: rotate(199deg) translateX(193px);
+}
+
+@keyframes r-27 {
+  0% {
+    transform: rotate(199) translateX(193px);
+  }
+  100% {
+    transform: rotate(559deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(28) {
+  width: 2px;
+  height: 2px;
+  animation: r-28 25.5s linear infinite;
+  transform: rotate(137deg) translateX(203px);
+}
+
+@keyframes r-28 {
+  0% {
+    transform: rotate(137) translateX(203px);
+  }
+  100% {
+    transform: rotate(497deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(29) {
+  width: 3px;
+  height: 3px;
+  animation: r-29 25.5s linear infinite;
+  transform: rotate(246deg) translateX(191px);
+}
+
+@keyframes r-29 {
+  0% {
+    transform: rotate(246) translateX(191px);
+  }
+  100% {
+    transform: rotate(606deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(30) {
+  width: 3px;
+  height: 3px;
+  animation: r-30 28.9s linear infinite;
+  transform: rotate(208deg) translateX(208px);
+}
+
+@keyframes r-30 {
+  0% {
+    transform: rotate(208) translateX(208px);
+  }
+  100% {
+    transform: rotate(568deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(31) {
+  width: 3px;
+  height: 3px;
+  animation: r-31 38.2s linear infinite;
+  transform: rotate(288deg) translateX(199px);
+}
+
+@keyframes r-31 {
+  0% {
+    transform: rotate(288) translateX(199px);
+  }
+  100% {
+    transform: rotate(648deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(32) {
+  width: 2px;
+  height: 2px;
+  animation: r-32 42.3s linear infinite;
+  transform: rotate(54deg) translateX(195px);
+}
+
+@keyframes r-32 {
+  0% {
+    transform: rotate(54) translateX(195px);
+  }
+  100% {
+    transform: rotate(414deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(33) {
+  width: 3px;
+  height: 3px;
+  animation: r-33 18.6s linear infinite;
+  transform: rotate(87deg) translateX(206px);
+}
+
+@keyframes r-33 {
+  0% {
+    transform: rotate(87) translateX(206px);
+  }
+  100% {
+    transform: rotate(447deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(34) {
+  width: 3px;
+  height: 3px;
+  animation: r-34 33.9s linear infinite;
+  transform: rotate(322deg) translateX(192px);
+}
+
+@keyframes r-34 {
+  0% {
+    transform: rotate(322) translateX(192px);
+  }
+  100% {
+    transform: rotate(682deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(35) {
+  width: 3px;
+  height: 3px;
+  animation: r-35 20.5s linear infinite;
+  transform: rotate(260deg) translateX(195px);
+}
+
+@keyframes r-35 {
+  0% {
+    transform: rotate(260) translateX(195px);
+  }
+  100% {
+    transform: rotate(620deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(36) {
+  width: 3px;
+  height: 3px;
+  animation: r-36 17.8s linear infinite;
+  transform: rotate(65deg) translateX(195px);
+}
+
+@keyframes r-36 {
+  0% {
+    transform: rotate(65) translateX(195px);
+  }
+  100% {
+    transform: rotate(425deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(37) {
+  width: 2px;
+  height: 2px;
+  animation: r-37 33.4s linear infinite;
+  transform: rotate(281deg) translateX(193px);
+}
+
+@keyframes r-37 {
+  0% {
+    transform: rotate(281) translateX(193px);
+  }
+  100% {
+    transform: rotate(641deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(38) {
+  width: 3px;
+  height: 3px;
+  animation: r-38 24s linear infinite;
+  transform: rotate(193deg) translateX(197px);
+}
+
+@keyframes r-38 {
+  0% {
+    transform: rotate(193) translateX(197px);
+  }
+  100% {
+    transform: rotate(553deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(39) {
+  width: 4px;
+  height: 4px;
+  animation: r-39 29.1s linear infinite;
+  transform: rotate(109deg) translateX(208px);
+}
+
+@keyframes r-39 {
+  0% {
+    transform: rotate(109) translateX(208px);
+  }
+  100% {
+    transform: rotate(469deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(40) {
+  width: 3px;
+  height: 3px;
+  animation: r-40 22.2s linear infinite;
+  transform: rotate(346deg) translateX(194px);
+}
+
+@keyframes r-40 {
+  0% {
+    transform: rotate(346) translateX(194px);
+  }
+  100% {
+    transform: rotate(706deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(41) {
+  width: 2px;
+  height: 2px;
+  animation: r-41 32s linear infinite;
+  transform: rotate(69deg) translateX(194px);
+}
+
+@keyframes r-41 {
+  0% {
+    transform: rotate(69) translateX(194px);
+  }
+  100% {
+    transform: rotate(429deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(42) {
+  width: 4px;
+  height: 4px;
+  animation: r-42 42.7s linear infinite;
+  transform: rotate(26deg) translateX(198px);
+}
+
+@keyframes r-42 {
+  0% {
+    transform: rotate(26) translateX(198px);
+  }
+  100% {
+    transform: rotate(386deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(43) {
+  width: 2px;
+  height: 2px;
+  animation: r-43 30.2s linear infinite;
+  transform: rotate(16deg) translateX(194px);
+}
+
+@keyframes r-43 {
+  0% {
+    transform: rotate(16) translateX(194px);
+  }
+  100% {
+    transform: rotate(376deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(44) {
+  width: 4px;
+  height: 4px;
+  animation: r-44 23.6s linear infinite;
+  transform: rotate(157deg) translateX(201px);
+}
+
+@keyframes r-44 {
+  0% {
+    transform: rotate(157) translateX(201px);
+  }
+  100% {
+    transform: rotate(517deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(45) {
+  width: 2px;
+  height: 2px;
+  animation: r-45 33.5s linear infinite;
+  transform: rotate(167deg) translateX(193px);
+}
+
+@keyframes r-45 {
+  0% {
+    transform: rotate(167) translateX(193px);
+  }
+  100% {
+    transform: rotate(527deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(46) {
+  width: 2px;
+  height: 2px;
+  animation: r-46 29.1s linear infinite;
+  transform: rotate(177deg) translateX(196px);
+}
+
+@keyframes r-46 {
+  0% {
+    transform: rotate(177) translateX(196px);
+  }
+  100% {
+    transform: rotate(537deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(47) {
+  width: 4px;
+  height: 4px;
+  animation: r-47 37.3s linear infinite;
+  transform: rotate(239deg) translateX(194px);
+}
+
+@keyframes r-47 {
+  0% {
+    transform: rotate(239) translateX(194px);
+  }
+  100% {
+    transform: rotate(599deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(48) {
+  width: 4px;
+  height: 4px;
+  animation: r-48 38.9s linear infinite;
+  transform: rotate(346deg) translateX(194px);
+}
+
+@keyframes r-48 {
+  0% {
+    transform: rotate(346) translateX(194px);
+  }
+  100% {
+    transform: rotate(706deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(49) {
+  width: 3px;
+  height: 3px;
+  animation: r-49 34.8s linear infinite;
+  transform: rotate(203deg) translateX(192px);
+}
+
+@keyframes r-49 {
+  0% {
+    transform: rotate(203) translateX(192px);
+  }
+  100% {
+    transform: rotate(563deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(50) {
+  width: 4px;
+  height: 4px;
+  animation: r-50 18.9s linear infinite;
+  transform: rotate(118deg) translateX(205px);
+}
+
+@keyframes r-50 {
+  0% {
+    transform: rotate(118) translateX(205px);
+  }
+  100% {
+    transform: rotate(478deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(51) {
+  width: 4px;
+  height: 4px;
+  animation: r-51 42s linear infinite;
+  transform: rotate(324deg) translateX(206px);
+}
+
+@keyframes r-51 {
+  0% {
+    transform: rotate(324) translateX(206px);
+  }
+  100% {
+    transform: rotate(684deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(52) {
+  width: 3px;
+  height: 3px;
+  animation: r-52 41.5s linear infinite;
+  transform: rotate(232deg) translateX(191px);
+}
+
+@keyframes r-52 {
+  0% {
+    transform: rotate(232) translateX(191px);
+  }
+  100% {
+    transform: rotate(592deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(53) {
+  width: 3px;
+  height: 3px;
+  animation: r-53 33.2s linear infinite;
+  transform: rotate(329deg) translateX(210px);
+}
+
+@keyframes r-53 {
+  0% {
+    transform: rotate(329) translateX(210px);
+  }
+  100% {
+    transform: rotate(689deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(54) {
+  width: 2px;
+  height: 2px;
+  animation: r-54 26.4s linear infinite;
+  transform: rotate(239deg) translateX(192px);
+}
+
+@keyframes r-54 {
+  0% {
+    transform: rotate(239) translateX(192px);
+  }
+  100% {
+    transform: rotate(599deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(55) {
+  width: 4px;
+  height: 4px;
+  animation: r-55 34.2s linear infinite;
+  transform: rotate(340deg) translateX(202px);
+}
+
+@keyframes r-55 {
+  0% {
+    transform: rotate(340) translateX(202px);
+  }
+  100% {
+    transform: rotate(700deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(56) {
+  width: 2px;
+  height: 2px;
+  animation: r-56 41.4s linear infinite;
+  transform: rotate(179deg) translateX(199px);
+}
+
+@keyframes r-56 {
+  0% {
+    transform: rotate(179) translateX(199px);
+  }
+  100% {
+    transform: rotate(539deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(57) {
+  width: 3px;
+  height: 3px;
+  animation: r-57 33.9s linear infinite;
+  transform: rotate(335deg) translateX(202px);
+}
+
+@keyframes r-57 {
+  0% {
+    transform: rotate(335) translateX(202px);
+  }
+  100% {
+    transform: rotate(695deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(58) {
+  width: 2px;
+  height: 2px;
+  animation: r-58 29.3s linear infinite;
+  transform: rotate(60deg) translateX(203px);
+}
+
+@keyframes r-58 {
+  0% {
+    transform: rotate(60) translateX(203px);
+  }
+  100% {
+    transform: rotate(420deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(59) {
+  width: 2px;
+  height: 2px;
+  animation: r-59 27.9s linear infinite;
+  transform: rotate(229deg) translateX(206px);
+}
+
+@keyframes r-59 {
+  0% {
+    transform: rotate(229) translateX(206px);
+  }
+  100% {
+    transform: rotate(589deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(60) {
+  width: 4px;
+  height: 4px;
+  animation: r-60 15.3s linear infinite;
+  transform: rotate(132deg) translateX(199px);
+}
+
+@keyframes r-60 {
+  0% {
+    transform: rotate(132) translateX(199px);
+  }
+  100% {
+    transform: rotate(492deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(61) {
+  width: 3px;
+  height: 3px;
+  animation: r-61 43.1s linear infinite;
+  transform: rotate(108deg) translateX(209px);
+}
+
+@keyframes r-61 {
+  0% {
+    transform: rotate(108) translateX(209px);
+  }
+  100% {
+    transform: rotate(468deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(62) {
+  width: 4px;
+  height: 4px;
+  animation: r-62 15.6s linear infinite;
+  transform: rotate(22deg) translateX(206px);
+}
+
+@keyframes r-62 {
+  0% {
+    transform: rotate(22) translateX(206px);
+  }
+  100% {
+    transform: rotate(382deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(63) {
+  width: 3px;
+  height: 3px;
+  animation: r-63 21.8s linear infinite;
+  transform: rotate(288deg) translateX(195px);
+}
+
+@keyframes r-63 {
+  0% {
+    transform: rotate(288) translateX(195px);
+  }
+  100% {
+    transform: rotate(648deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(64) {
+  width: 4px;
+  height: 4px;
+  animation: r-64 19.2s linear infinite;
+  transform: rotate(241deg) translateX(195px);
+}
+
+@keyframes r-64 {
+  0% {
+    transform: rotate(241) translateX(195px);
+  }
+  100% {
+    transform: rotate(601deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(65) {
+  width: 2px;
+  height: 2px;
+  animation: r-65 25.4s linear infinite;
+  transform: rotate(354deg) translateX(198px);
+}
+
+@keyframes r-65 {
+  0% {
+    transform: rotate(354) translateX(198px);
+  }
+  100% {
+    transform: rotate(714deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(66) {
+  width: 3px;
+  height: 3px;
+  animation: r-66 29.4s linear infinite;
+  transform: rotate(257deg) translateX(193px);
+}
+
+@keyframes r-66 {
+  0% {
+    transform: rotate(257) translateX(193px);
+  }
+  100% {
+    transform: rotate(617deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(67) {
+  width: 2px;
+  height: 2px;
+  animation: r-67 29.7s linear infinite;
+  transform: rotate(248deg) translateX(195px);
+}
+
+@keyframes r-67 {
+  0% {
+    transform: rotate(248) translateX(195px);
+  }
+  100% {
+    transform: rotate(608deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(68) {
+  width: 2px;
+  height: 2px;
+  animation: r-68 26.8s linear infinite;
+  transform: rotate(135deg) translateX(203px);
+}
+
+@keyframes r-68 {
+  0% {
+    transform: rotate(135) translateX(203px);
+  }
+  100% {
+    transform: rotate(495deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(69) {
+  width: 4px;
+  height: 4px;
+  animation: r-69 25.5s linear infinite;
+  transform: rotate(78deg) translateX(203px);
+}
+
+@keyframes r-69 {
+  0% {
+    transform: rotate(78) translateX(203px);
+  }
+  100% {
+    transform: rotate(438deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(70) {
+  width: 2px;
+  height: 2px;
+  animation: r-70 30.4s linear infinite;
+  transform: rotate(157deg) translateX(207px);
+}
+
+@keyframes r-70 {
+  0% {
+    transform: rotate(157) translateX(207px);
+  }
+  100% {
+    transform: rotate(517deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(71) {
+  width: 2px;
+  height: 2px;
+  animation: r-71 30.1s linear infinite;
+  transform: rotate(243deg) translateX(199px);
+}
+
+@keyframes r-71 {
+  0% {
+    transform: rotate(243) translateX(199px);
+  }
+  100% {
+    transform: rotate(603deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(72) {
+  width: 3px;
+  height: 3px;
+  animation: r-72 20.1s linear infinite;
+  transform: rotate(191deg) translateX(206px);
+}
+
+@keyframes r-72 {
+  0% {
+    transform: rotate(191) translateX(206px);
+  }
+  100% {
+    transform: rotate(551deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(73) {
+  width: 3px;
+  height: 3px;
+  animation: r-73 23.3s linear infinite;
+  transform: rotate(283deg) translateX(191px);
+}
+
+@keyframes r-73 {
+  0% {
+    transform: rotate(283) translateX(191px);
+  }
+  100% {
+    transform: rotate(643deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(74) {
+  width: 2px;
+  height: 2px;
+  animation: r-74 34.7s linear infinite;
+  transform: rotate(47deg) translateX(206px);
+}
+
+@keyframes r-74 {
+  0% {
+    transform: rotate(47) translateX(206px);
+  }
+  100% {
+    transform: rotate(407deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(75) {
+  width: 3px;
+  height: 3px;
+  animation: r-75 19.9s linear infinite;
+  transform: rotate(73deg) translateX(207px);
+}
+
+@keyframes r-75 {
+  0% {
+    transform: rotate(73) translateX(207px);
+  }
+  100% {
+    transform: rotate(433deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(76) {
+  width: 4px;
+  height: 4px;
+  animation: r-76 27.9s linear infinite;
+  transform: rotate(313deg) translateX(210px);
+}
+
+@keyframes r-76 {
+  0% {
+    transform: rotate(313) translateX(210px);
+  }
+  100% {
+    transform: rotate(673deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(77) {
+  width: 3px;
+  height: 3px;
+  animation: r-77 42.4s linear infinite;
+  transform: rotate(45deg) translateX(194px);
+}
+
+@keyframes r-77 {
+  0% {
+    transform: rotate(45) translateX(194px);
+  }
+  100% {
+    transform: rotate(405deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(78) {
+  width: 4px;
+  height: 4px;
+  animation: r-78 44.5s linear infinite;
+  transform: rotate(24deg) translateX(206px);
+}
+
+@keyframes r-78 {
+  0% {
+    transform: rotate(24) translateX(206px);
+  }
+  100% {
+    transform: rotate(384deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(79) {
+  width: 2px;
+  height: 2px;
+  animation: r-79 36.3s linear infinite;
+  transform: rotate(109deg) translateX(192px);
+}
+
+@keyframes r-79 {
+  0% {
+    transform: rotate(109) translateX(192px);
+  }
+  100% {
+    transform: rotate(469deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(80) {
+  width: 4px;
+  height: 4px;
+  animation: r-80 38.6s linear infinite;
+  transform: rotate(255deg) translateX(199px);
+}
+
+@keyframes r-80 {
+  0% {
+    transform: rotate(255) translateX(199px);
+  }
+  100% {
+    transform: rotate(615deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(81) {
+  width: 3px;
+  height: 3px;
+  animation: r-81 24.5s linear infinite;
+  transform: rotate(84deg) translateX(194px);
+}
+
+@keyframes r-81 {
+  0% {
+    transform: rotate(84) translateX(194px);
+  }
+  100% {
+    transform: rotate(444deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(82) {
+  width: 2px;
+  height: 2px;
+  animation: r-82 19.5s linear infinite;
+  transform: rotate(357deg) translateX(191px);
+}
+
+@keyframes r-82 {
+  0% {
+    transform: rotate(357) translateX(191px);
+  }
+  100% {
+    transform: rotate(717deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(83) {
+  width: 2px;
+  height: 2px;
+  animation: r-83 39.9s linear infinite;
+  transform: rotate(55deg) translateX(206px);
+}
+
+@keyframes r-83 {
+  0% {
+    transform: rotate(55) translateX(206px);
+  }
+  100% {
+    transform: rotate(415deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(84) {
+  width: 3px;
+  height: 3px;
+  animation: r-84 33s linear infinite;
+  transform: rotate(55deg) translateX(199px);
+}
+
+@keyframes r-84 {
+  0% {
+    transform: rotate(55) translateX(199px);
+  }
+  100% {
+    transform: rotate(415deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(85) {
+  width: 2px;
+  height: 2px;
+  animation: r-85 33.1s linear infinite;
+  transform: rotate(184deg) translateX(202px);
+}
+
+@keyframes r-85 {
+  0% {
+    transform: rotate(184) translateX(202px);
+  }
+  100% {
+    transform: rotate(544deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(86) {
+  width: 4px;
+  height: 4px;
+  animation: r-86 42.4s linear infinite;
+  transform: rotate(353deg) translateX(208px);
+}
+
+@keyframes r-86 {
+  0% {
+    transform: rotate(353) translateX(208px);
+  }
+  100% {
+    transform: rotate(713deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(87) {
+  width: 4px;
+  height: 4px;
+  animation: r-87 22.8s linear infinite;
+  transform: rotate(290deg) translateX(205px);
+}
+
+@keyframes r-87 {
+  0% {
+    transform: rotate(290) translateX(205px);
+  }
+  100% {
+    transform: rotate(650deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(88) {
+  width: 2px;
+  height: 2px;
+  animation: r-88 43.5s linear infinite;
+  transform: rotate(302deg) translateX(203px);
+}
+
+@keyframes r-88 {
+  0% {
+    transform: rotate(302) translateX(203px);
+  }
+  100% {
+    transform: rotate(662deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(89) {
+  width: 3px;
+  height: 3px;
+  animation: r-89 33s linear infinite;
+  transform: rotate(43deg) translateX(194px);
+}
+
+@keyframes r-89 {
+  0% {
+    transform: rotate(43) translateX(194px);
+  }
+  100% {
+    transform: rotate(403deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(90) {
+  width: 3px;
+  height: 3px;
+  animation: r-90 23.4s linear infinite;
+  transform: rotate(35deg) translateX(199px);
+}
+
+@keyframes r-90 {
+  0% {
+    transform: rotate(35) translateX(199px);
+  }
+  100% {
+    transform: rotate(395deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(91) {
+  width: 2px;
+  height: 2px;
+  animation: r-91 23s linear infinite;
+  transform: rotate(172deg) translateX(192px);
+}
+
+@keyframes r-91 {
+  0% {
+    transform: rotate(172) translateX(192px);
+  }
+  100% {
+    transform: rotate(532deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(92) {
+  width: 4px;
+  height: 4px;
+  animation: r-92 25.2s linear infinite;
+  transform: rotate(321deg) translateX(207px);
+}
+
+@keyframes r-92 {
+  0% {
+    transform: rotate(321) translateX(207px);
+  }
+  100% {
+    transform: rotate(681deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(93) {
+  width: 3px;
+  height: 3px;
+  animation: r-93 19.1s linear infinite;
+  transform: rotate(234deg) translateX(201px);
+}
+
+@keyframes r-93 {
+  0% {
+    transform: rotate(234) translateX(201px);
+  }
+  100% {
+    transform: rotate(594deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(94) {
+  width: 3px;
+  height: 3px;
+  animation: r-94 27.9s linear infinite;
+  transform: rotate(258deg) translateX(194px);
+}
+
+@keyframes r-94 {
+  0% {
+    transform: rotate(258) translateX(194px);
+  }
+  100% {
+    transform: rotate(618deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(95) {
+  width: 3px;
+  height: 3px;
+  animation: r-95 15.2s linear infinite;
+  transform: rotate(189deg) translateX(200px);
+}
+
+@keyframes r-95 {
+  0% {
+    transform: rotate(189) translateX(200px);
+  }
+  100% {
+    transform: rotate(549deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(96) {
+  width: 2px;
+  height: 2px;
+  animation: r-96 29.7s linear infinite;
+  transform: rotate(291deg) translateX(210px);
+}
+
+@keyframes r-96 {
+  0% {
+    transform: rotate(291) translateX(210px);
+  }
+  100% {
+    transform: rotate(651deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(97) {
+  width: 2px;
+  height: 2px;
+  animation: r-97 20.5s linear infinite;
+  transform: rotate(260deg) translateX(192px);
+}
+
+@keyframes r-97 {
+  0% {
+    transform: rotate(260) translateX(192px);
+  }
+  100% {
+    transform: rotate(620deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(98) {
+  width: 3px;
+  height: 3px;
+  animation: r-98 20.1s linear infinite;
+  transform: rotate(43deg) translateX(200px);
+}
+
+@keyframes r-98 {
+  0% {
+    transform: rotate(43) translateX(200px);
+  }
+  100% {
+    transform: rotate(403deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(99) {
+  width: 3px;
+  height: 3px;
+  animation: r-99 16.7s linear infinite;
+  transform: rotate(123deg) translateX(193px);
+}
+
+@keyframes r-99 {
+  0% {
+    transform: rotate(123) translateX(193px);
+  }
+  100% {
+    transform: rotate(483deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(100) {
+  width: 2px;
+  height: 2px;
+  animation: r-100 42.6s linear infinite;
+  transform: rotate(96deg) translateX(204px);
+}
+
+@keyframes r-100 {
+  0% {
+    transform: rotate(96) translateX(204px);
+  }
+  100% {
+    transform: rotate(456deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(101) {
+  width: 2px;
+  height: 2px;
+  animation: r-101 28s linear infinite;
+  transform: rotate(172deg) translateX(204px);
+}
+
+@keyframes r-101 {
+  0% {
+    transform: rotate(172) translateX(204px);
+  }
+  100% {
+    transform: rotate(532deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(102) {
+  width: 3px;
+  height: 3px;
+  animation: r-102 40.5s linear infinite;
+  transform: rotate(65deg) translateX(199px);
+}
+
+@keyframes r-102 {
+  0% {
+    transform: rotate(65) translateX(199px);
+  }
+  100% {
+    transform: rotate(425deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(103) {
+  width: 4px;
+  height: 4px;
+  animation: r-103 23.5s linear infinite;
+  transform: rotate(84deg) translateX(209px);
+}
+
+@keyframes r-103 {
+  0% {
+    transform: rotate(84) translateX(209px);
+  }
+  100% {
+    transform: rotate(444deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(104) {
+  width: 2px;
+  height: 2px;
+  animation: r-104 32.8s linear infinite;
+  transform: rotate(136deg) translateX(198px);
+}
+
+@keyframes r-104 {
+  0% {
+    transform: rotate(136) translateX(198px);
+  }
+  100% {
+    transform: rotate(496deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(105) {
+  width: 4px;
+  height: 4px;
+  animation: r-105 21.2s linear infinite;
+  transform: rotate(310deg) translateX(197px);
+}
+
+@keyframes r-105 {
+  0% {
+    transform: rotate(310) translateX(197px);
+  }
+  100% {
+    transform: rotate(670deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(106) {
+  width: 3px;
+  height: 3px;
+  animation: r-106 39s linear infinite;
+  transform: rotate(72deg) translateX(208px);
+}
+
+@keyframes r-106 {
+  0% {
+    transform: rotate(72) translateX(208px);
+  }
+  100% {
+    transform: rotate(432deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(107) {
+  width: 4px;
+  height: 4px;
+  animation: r-107 37.4s linear infinite;
+  transform: rotate(230deg) translateX(196px);
+}
+
+@keyframes r-107 {
+  0% {
+    transform: rotate(230) translateX(196px);
+  }
+  100% {
+    transform: rotate(590deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(108) {
+  width: 4px;
+  height: 4px;
+  animation: r-108 22.7s linear infinite;
+  transform: rotate(161deg) translateX(205px);
+}
+
+@keyframes r-108 {
+  0% {
+    transform: rotate(161) translateX(205px);
+  }
+  100% {
+    transform: rotate(521deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(109) {
+  width: 3px;
+  height: 3px;
+  animation: r-109 20s linear infinite;
+  transform: rotate(1deg) translateX(197px);
+}
+
+@keyframes r-109 {
+  0% {
+    transform: rotate(1) translateX(197px);
+  }
+  100% {
+    transform: rotate(361deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(110) {
+  width: 4px;
+  height: 4px;
+  animation: r-110 18s linear infinite;
+  transform: rotate(72deg) translateX(198px);
+}
+
+@keyframes r-110 {
+  0% {
+    transform: rotate(72) translateX(198px);
+  }
+  100% {
+    transform: rotate(432deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(111) {
+  width: 4px;
+  height: 4px;
+  animation: r-111 33s linear infinite;
+  transform: rotate(298deg) translateX(191px);
+}
+
+@keyframes r-111 {
+  0% {
+    transform: rotate(298) translateX(191px);
+  }
+  100% {
+    transform: rotate(658deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(112) {
+  width: 2px;
+  height: 2px;
+  animation: r-112 15.1s linear infinite;
+  transform: rotate(83deg) translateX(209px);
+}
+
+@keyframes r-112 {
+  0% {
+    transform: rotate(83) translateX(209px);
+  }
+  100% {
+    transform: rotate(443deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(113) {
+  width: 4px;
+  height: 4px;
+  animation: r-113 29s linear infinite;
+  transform: rotate(214deg) translateX(195px);
+}
+
+@keyframes r-113 {
+  0% {
+    transform: rotate(214) translateX(195px);
+  }
+  100% {
+    transform: rotate(574deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(114) {
+  width: 2px;
+  height: 2px;
+  animation: r-114 30.8s linear infinite;
+  transform: rotate(298deg) translateX(195px);
+}
+
+@keyframes r-114 {
+  0% {
+    transform: rotate(298) translateX(195px);
+  }
+  100% {
+    transform: rotate(658deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(115) {
+  width: 4px;
+  height: 4px;
+  animation: r-115 25.8s linear infinite;
+  transform: rotate(76deg) translateX(209px);
+}
+
+@keyframes r-115 {
+  0% {
+    transform: rotate(76) translateX(209px);
+  }
+  100% {
+    transform: rotate(436deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(116) {
+  width: 2px;
+  height: 2px;
+  animation: r-116 21.4s linear infinite;
+  transform: rotate(125deg) translateX(209px);
+}
+
+@keyframes r-116 {
+  0% {
+    transform: rotate(125) translateX(209px);
+  }
+  100% {
+    transform: rotate(485deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(117) {
+  width: 4px;
+  height: 4px;
+  animation: r-117 39.6s linear infinite;
+  transform: rotate(155deg) translateX(198px);
+}
+
+@keyframes r-117 {
+  0% {
+    transform: rotate(155) translateX(198px);
+  }
+  100% {
+    transform: rotate(515deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(118) {
+  width: 4px;
+  height: 4px;
+  animation: r-118 19s linear infinite;
+  transform: rotate(360deg) translateX(194px);
+}
+
+@keyframes r-118 {
+  0% {
+    transform: rotate(360) translateX(194px);
+  }
+  100% {
+    transform: rotate(720deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(119) {
+  width: 2px;
+  height: 2px;
+  animation: r-119 42.4s linear infinite;
+  transform: rotate(237deg) translateX(192px);
+}
+
+@keyframes r-119 {
+  0% {
+    transform: rotate(237) translateX(192px);
+  }
+  100% {
+    transform: rotate(597deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(120) {
+  width: 4px;
+  height: 4px;
+  animation: r-120 20.2s linear infinite;
+  transform: rotate(287deg) translateX(204px);
+}
+
+@keyframes r-120 {
+  0% {
+    transform: rotate(287) translateX(204px);
+  }
+  100% {
+    transform: rotate(647deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(121) {
+  width: 4px;
+  height: 4px;
+  animation: r-121 30s linear infinite;
+  transform: rotate(131deg) translateX(209px);
+}
+
+@keyframes r-121 {
+  0% {
+    transform: rotate(131) translateX(209px);
+  }
+  100% {
+    transform: rotate(491deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(122) {
+  width: 4px;
+  height: 4px;
+  animation: r-122 19.4s linear infinite;
+  transform: rotate(160deg) translateX(209px);
+}
+
+@keyframes r-122 {
+  0% {
+    transform: rotate(160) translateX(209px);
+  }
+  100% {
+    transform: rotate(520deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(123) {
+  width: 3px;
+  height: 3px;
+  animation: r-123 20.7s linear infinite;
+  transform: rotate(58deg) translateX(202px);
+}
+
+@keyframes r-123 {
+  0% {
+    transform: rotate(58) translateX(202px);
+  }
+  100% {
+    transform: rotate(418deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(124) {
+  width: 4px;
+  height: 4px;
+  animation: r-124 36.9s linear infinite;
+  transform: rotate(141deg) translateX(210px);
+}
+
+@keyframes r-124 {
+  0% {
+    transform: rotate(141) translateX(210px);
+  }
+  100% {
+    transform: rotate(501deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(125) {
+  width: 2px;
+  height: 2px;
+  animation: r-125 21.1s linear infinite;
+  transform: rotate(261deg) translateX(209px);
+}
+
+@keyframes r-125 {
+  0% {
+    transform: rotate(261) translateX(209px);
+  }
+  100% {
+    transform: rotate(621deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(126) {
+  width: 4px;
+  height: 4px;
+  animation: r-126 44.8s linear infinite;
+  transform: rotate(67deg) translateX(198px);
+}
+
+@keyframes r-126 {
+  0% {
+    transform: rotate(67) translateX(198px);
+  }
+  100% {
+    transform: rotate(427deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(127) {
+  width: 3px;
+  height: 3px;
+  animation: r-127 18.7s linear infinite;
+  transform: rotate(339deg) translateX(191px);
+}
+
+@keyframes r-127 {
+  0% {
+    transform: rotate(339) translateX(191px);
+  }
+  100% {
+    transform: rotate(699deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(128) {
+  width: 4px;
+  height: 4px;
+  animation: r-128 32.1s linear infinite;
+  transform: rotate(315deg) translateX(194px);
+}
+
+@keyframes r-128 {
+  0% {
+    transform: rotate(315) translateX(194px);
+  }
+  100% {
+    transform: rotate(675deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(129) {
+  width: 3px;
+  height: 3px;
+  animation: r-129 15.2s linear infinite;
+  transform: rotate(74deg) translateX(201px);
+}
+
+@keyframes r-129 {
+  0% {
+    transform: rotate(74) translateX(201px);
+  }
+  100% {
+    transform: rotate(434deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(130) {
+  width: 2px;
+  height: 2px;
+  animation: r-130 41.5s linear infinite;
+  transform: rotate(233deg) translateX(205px);
+}
+
+@keyframes r-130 {
+  0% {
+    transform: rotate(233) translateX(205px);
+  }
+  100% {
+    transform: rotate(593deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(131) {
+  width: 3px;
+  height: 3px;
+  animation: r-131 30.6s linear infinite;
+  transform: rotate(184deg) translateX(202px);
+}
+
+@keyframes r-131 {
+  0% {
+    transform: rotate(184) translateX(202px);
+  }
+  100% {
+    transform: rotate(544deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(132) {
+  width: 3px;
+  height: 3px;
+  animation: r-132 20s linear infinite;
+  transform: rotate(147deg) translateX(198px);
+}
+
+@keyframes r-132 {
+  0% {
+    transform: rotate(147) translateX(198px);
+  }
+  100% {
+    transform: rotate(507deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(133) {
+  width: 4px;
+  height: 4px;
+  animation: r-133 41.9s linear infinite;
+  transform: rotate(222deg) translateX(196px);
+}
+
+@keyframes r-133 {
+  0% {
+    transform: rotate(222) translateX(196px);
+  }
+  100% {
+    transform: rotate(582deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(134) {
+  width: 2px;
+  height: 2px;
+  animation: r-134 28.2s linear infinite;
+  transform: rotate(49deg) translateX(194px);
+}
+
+@keyframes r-134 {
+  0% {
+    transform: rotate(49) translateX(194px);
+  }
+  100% {
+    transform: rotate(409deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(135) {
+  width: 3px;
+  height: 3px;
+  animation: r-135 36.2s linear infinite;
+  transform: rotate(286deg) translateX(209px);
+}
+
+@keyframes r-135 {
+  0% {
+    transform: rotate(286) translateX(209px);
+  }
+  100% {
+    transform: rotate(646deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(136) {
+  width: 4px;
+  height: 4px;
+  animation: r-136 23.1s linear infinite;
+  transform: rotate(108deg) translateX(199px);
+}
+
+@keyframes r-136 {
+  0% {
+    transform: rotate(108) translateX(199px);
+  }
+  100% {
+    transform: rotate(468deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(137) {
+  width: 4px;
+  height: 4px;
+  animation: r-137 43.9s linear infinite;
+  transform: rotate(182deg) translateX(197px);
+}
+
+@keyframes r-137 {
+  0% {
+    transform: rotate(182) translateX(197px);
+  }
+  100% {
+    transform: rotate(542deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(138) {
+  width: 3px;
+  height: 3px;
+  animation: r-138 33.2s linear infinite;
+  transform: rotate(185deg) translateX(207px);
+}
+
+@keyframes r-138 {
+  0% {
+    transform: rotate(185) translateX(207px);
+  }
+  100% {
+    transform: rotate(545deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(139) {
+  width: 2px;
+  height: 2px;
+  animation: r-139 25s linear infinite;
+  transform: rotate(248deg) translateX(199px);
+}
+
+@keyframes r-139 {
+  0% {
+    transform: rotate(248) translateX(199px);
+  }
+  100% {
+    transform: rotate(608deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(140) {
+  width: 3px;
+  height: 3px;
+  animation: r-140 25.7s linear infinite;
+  transform: rotate(146deg) translateX(191px);
+}
+
+@keyframes r-140 {
+  0% {
+    transform: rotate(146) translateX(191px);
+  }
+  100% {
+    transform: rotate(506deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(141) {
+  width: 2px;
+  height: 2px;
+  animation: r-141 23s linear infinite;
+  transform: rotate(172deg) translateX(201px);
+}
+
+@keyframes r-141 {
+  0% {
+    transform: rotate(172) translateX(201px);
+  }
+  100% {
+    transform: rotate(532deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(142) {
+  width: 4px;
+  height: 4px;
+  animation: r-142 25.7s linear infinite;
+  transform: rotate(248deg) translateX(191px);
+}
+
+@keyframes r-142 {
+  0% {
+    transform: rotate(248) translateX(191px);
+  }
+  100% {
+    transform: rotate(608deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(143) {
+  width: 3px;
+  height: 3px;
+  animation: r-143 35.9s linear infinite;
+  transform: rotate(264deg) translateX(205px);
+}
+
+@keyframes r-143 {
+  0% {
+    transform: rotate(264) translateX(205px);
+  }
+  100% {
+    transform: rotate(624deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(144) {
+  width: 2px;
+  height: 2px;
+  animation: r-144 38.6s linear infinite;
+  transform: rotate(145deg) translateX(199px);
+}
+
+@keyframes r-144 {
+  0% {
+    transform: rotate(145) translateX(199px);
+  }
+  100% {
+    transform: rotate(505deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(145) {
+  width: 2px;
+  height: 2px;
+  animation: r-145 26.7s linear infinite;
+  transform: rotate(222deg) translateX(196px);
+}
+
+@keyframes r-145 {
+  0% {
+    transform: rotate(222) translateX(196px);
+  }
+  100% {
+    transform: rotate(582deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(146) {
+  width: 2px;
+  height: 2px;
+  animation: r-146 43.4s linear infinite;
+  transform: rotate(65deg) translateX(210px);
+}
+
+@keyframes r-146 {
+  0% {
+    transform: rotate(65) translateX(210px);
+  }
+  100% {
+    transform: rotate(425deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(147) {
+  width: 3px;
+  height: 3px;
+  animation: r-147 42.6s linear infinite;
+  transform: rotate(334deg) translateX(208px);
+}
+
+@keyframes r-147 {
+  0% {
+    transform: rotate(334) translateX(208px);
+  }
+  100% {
+    transform: rotate(694deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(148) {
+  width: 4px;
+  height: 4px;
+  animation: r-148 29.5s linear infinite;
+  transform: rotate(341deg) translateX(203px);
+}
+
+@keyframes r-148 {
+  0% {
+    transform: rotate(341) translateX(203px);
+  }
+  100% {
+    transform: rotate(701deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(149) {
+  width: 2px;
+  height: 2px;
+  animation: r-149 40.4s linear infinite;
+  transform: rotate(93deg) translateX(204px);
+}
+
+@keyframes r-149 {
+  0% {
+    transform: rotate(93) translateX(204px);
+  }
+  100% {
+    transform: rotate(453deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(150) {
+  width: 3px;
+  height: 3px;
+  animation: r-150 32.6s linear infinite;
+  transform: rotate(213deg) translateX(196px);
+}
+
+@keyframes r-150 {
+  0% {
+    transform: rotate(213) translateX(196px);
+  }
+  100% {
+    transform: rotate(573deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(151) {
+  width: 2px;
+  height: 2px;
+  animation: r-151 39s linear infinite;
+  transform: rotate(317deg) translateX(205px);
+}
+
+@keyframes r-151 {
+  0% {
+    transform: rotate(317) translateX(205px);
+  }
+  100% {
+    transform: rotate(677deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(152) {
+  width: 3px;
+  height: 3px;
+  animation: r-152 40.2s linear infinite;
+  transform: rotate(178deg) translateX(206px);
+}
+
+@keyframes r-152 {
+  0% {
+    transform: rotate(178) translateX(206px);
+  }
+  100% {
+    transform: rotate(538deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(153) {
+  width: 2px;
+  height: 2px;
+  animation: r-153 32.5s linear infinite;
+  transform: rotate(286deg) translateX(199px);
+}
+
+@keyframes r-153 {
+  0% {
+    transform: rotate(286) translateX(199px);
+  }
+  100% {
+    transform: rotate(646deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(154) {
+  width: 3px;
+  height: 3px;
+  animation: r-154 30.5s linear infinite;
+  transform: rotate(251deg) translateX(202px);
+}
+
+@keyframes r-154 {
+  0% {
+    transform: rotate(251) translateX(202px);
+  }
+  100% {
+    transform: rotate(611deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(155) {
+  width: 4px;
+  height: 4px;
+  animation: r-155 17.9s linear infinite;
+  transform: rotate(110deg) translateX(194px);
+}
+
+@keyframes r-155 {
+  0% {
+    transform: rotate(110) translateX(194px);
+  }
+  100% {
+    transform: rotate(470deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(156) {
+  width: 2px;
+  height: 2px;
+  animation: r-156 28.7s linear infinite;
+  transform: rotate(35deg) translateX(195px);
+}
+
+@keyframes r-156 {
+  0% {
+    transform: rotate(35) translateX(195px);
+  }
+  100% {
+    transform: rotate(395deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(157) {
+  width: 3px;
+  height: 3px;
+  animation: r-157 41.3s linear infinite;
+  transform: rotate(23deg) translateX(200px);
+}
+
+@keyframes r-157 {
+  0% {
+    transform: rotate(23) translateX(200px);
+  }
+  100% {
+    transform: rotate(383deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(158) {
+  width: 2px;
+  height: 2px;
+  animation: r-158 19s linear infinite;
+  transform: rotate(127deg) translateX(206px);
+}
+
+@keyframes r-158 {
+  0% {
+    transform: rotate(127) translateX(206px);
+  }
+  100% {
+    transform: rotate(487deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(159) {
+  width: 3px;
+  height: 3px;
+  animation: r-159 21.6s linear infinite;
+  transform: rotate(333deg) translateX(209px);
+}
+
+@keyframes r-159 {
+  0% {
+    transform: rotate(333) translateX(209px);
+  }
+  100% {
+    transform: rotate(693deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(160) {
+  width: 4px;
+  height: 4px;
+  animation: r-160 18s linear infinite;
+  transform: rotate(236deg) translateX(197px);
+}
+
+@keyframes r-160 {
+  0% {
+    transform: rotate(236) translateX(197px);
+  }
+  100% {
+    transform: rotate(596deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(161) {
+  width: 3px;
+  height: 3px;
+  animation: r-161 43.2s linear infinite;
+  transform: rotate(272deg) translateX(199px);
+}
+
+@keyframes r-161 {
+  0% {
+    transform: rotate(272) translateX(199px);
+  }
+  100% {
+    transform: rotate(632deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(162) {
+  width: 4px;
+  height: 4px;
+  animation: r-162 37.7s linear infinite;
+  transform: rotate(196deg) translateX(205px);
+}
+
+@keyframes r-162 {
+  0% {
+    transform: rotate(196) translateX(205px);
+  }
+  100% {
+    transform: rotate(556deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(163) {
+  width: 4px;
+  height: 4px;
+  animation: r-163 30.4s linear infinite;
+  transform: rotate(194deg) translateX(207px);
+}
+
+@keyframes r-163 {
+  0% {
+    transform: rotate(194) translateX(207px);
+  }
+  100% {
+    transform: rotate(554deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(164) {
+  width: 2px;
+  height: 2px;
+  animation: r-164 36.3s linear infinite;
+  transform: rotate(63deg) translateX(203px);
+}
+
+@keyframes r-164 {
+  0% {
+    transform: rotate(63) translateX(203px);
+  }
+  100% {
+    transform: rotate(423deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(165) {
+  width: 3px;
+  height: 3px;
+  animation: r-165 27.5s linear infinite;
+  transform: rotate(289deg) translateX(206px);
+}
+
+@keyframes r-165 {
+  0% {
+    transform: rotate(289) translateX(206px);
+  }
+  100% {
+    transform: rotate(649deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(166) {
+  width: 4px;
+  height: 4px;
+  animation: r-166 16s linear infinite;
+  transform: rotate(278deg) translateX(206px);
+}
+
+@keyframes r-166 {
+  0% {
+    transform: rotate(278) translateX(206px);
+  }
+  100% {
+    transform: rotate(638deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(167) {
+  width: 2px;
+  height: 2px;
+  animation: r-167 24.7s linear infinite;
+  transform: rotate(223deg) translateX(210px);
+}
+
+@keyframes r-167 {
+  0% {
+    transform: rotate(223) translateX(210px);
+  }
+  100% {
+    transform: rotate(583deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(168) {
+  width: 2px;
+  height: 2px;
+  animation: r-168 27.2s linear infinite;
+  transform: rotate(67deg) translateX(206px);
+}
+
+@keyframes r-168 {
+  0% {
+    transform: rotate(67) translateX(206px);
+  }
+  100% {
+    transform: rotate(427deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(169) {
+  width: 4px;
+  height: 4px;
+  animation: r-169 18.1s linear infinite;
+  transform: rotate(162deg) translateX(198px);
+}
+
+@keyframes r-169 {
+  0% {
+    transform: rotate(162) translateX(198px);
+  }
+  100% {
+    transform: rotate(522deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(170) {
+  width: 2px;
+  height: 2px;
+  animation: r-170 43.5s linear infinite;
+  transform: rotate(68deg) translateX(197px);
+}
+
+@keyframes r-170 {
+  0% {
+    transform: rotate(68) translateX(197px);
+  }
+  100% {
+    transform: rotate(428deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(171) {
+  width: 3px;
+  height: 3px;
+  animation: r-171 39s linear infinite;
+  transform: rotate(182deg) translateX(206px);
+}
+
+@keyframes r-171 {
+  0% {
+    transform: rotate(182) translateX(206px);
+  }
+  100% {
+    transform: rotate(542deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(172) {
+  width: 2px;
+  height: 2px;
+  animation: r-172 21.8s linear infinite;
+  transform: rotate(90deg) translateX(191px);
+}
+
+@keyframes r-172 {
+  0% {
+    transform: rotate(90) translateX(191px);
+  }
+  100% {
+    transform: rotate(450deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(173) {
+  width: 3px;
+  height: 3px;
+  animation: r-173 38.7s linear infinite;
+  transform: rotate(290deg) translateX(207px);
+}
+
+@keyframes r-173 {
+  0% {
+    transform: rotate(290) translateX(207px);
+  }
+  100% {
+    transform: rotate(650deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(174) {
+  width: 4px;
+  height: 4px;
+  animation: r-174 15.4s linear infinite;
+  transform: rotate(56deg) translateX(193px);
+}
+
+@keyframes r-174 {
+  0% {
+    transform: rotate(56) translateX(193px);
+  }
+  100% {
+    transform: rotate(416deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(175) {
+  width: 2px;
+  height: 2px;
+  animation: r-175 29.7s linear infinite;
+  transform: rotate(329deg) translateX(192px);
+}
+
+@keyframes r-175 {
+  0% {
+    transform: rotate(329) translateX(192px);
+  }
+  100% {
+    transform: rotate(689deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(176) {
+  width: 4px;
+  height: 4px;
+  animation: r-176 44.1s linear infinite;
+  transform: rotate(241deg) translateX(197px);
+}
+
+@keyframes r-176 {
+  0% {
+    transform: rotate(241) translateX(197px);
+  }
+  100% {
+    transform: rotate(601deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(177) {
+  width: 2px;
+  height: 2px;
+  animation: r-177 24.5s linear infinite;
+  transform: rotate(343deg) translateX(207px);
+}
+
+@keyframes r-177 {
+  0% {
+    transform: rotate(343) translateX(207px);
+  }
+  100% {
+    transform: rotate(703deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(178) {
+  width: 2px;
+  height: 2px;
+  animation: r-178 29.7s linear infinite;
+  transform: rotate(206deg) translateX(204px);
+}
+
+@keyframes r-178 {
+  0% {
+    transform: rotate(206) translateX(204px);
+  }
+  100% {
+    transform: rotate(566deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(179) {
+  width: 4px;
+  height: 4px;
+  animation: r-179 38.8s linear infinite;
+  transform: rotate(81deg) translateX(194px);
+}
+
+@keyframes r-179 {
+  0% {
+    transform: rotate(81) translateX(194px);
+  }
+  100% {
+    transform: rotate(441deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(180) {
+  width: 2px;
+  height: 2px;
+  animation: r-180 21.9s linear infinite;
+  transform: rotate(337deg) translateX(201px);
+}
+
+@keyframes r-180 {
+  0% {
+    transform: rotate(337) translateX(201px);
+  }
+  100% {
+    transform: rotate(697deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(181) {
+  width: 3px;
+  height: 3px;
+  animation: r-181 25s linear infinite;
+  transform: rotate(115deg) translateX(199px);
+}
+
+@keyframes r-181 {
+  0% {
+    transform: rotate(115) translateX(199px);
+  }
+  100% {
+    transform: rotate(475deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(182) {
+  width: 3px;
+  height: 3px;
+  animation: r-182 28s linear infinite;
+  transform: rotate(138deg) translateX(196px);
+}
+
+@keyframes r-182 {
+  0% {
+    transform: rotate(138) translateX(196px);
+  }
+  100% {
+    transform: rotate(498deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(183) {
+  width: 4px;
+  height: 4px;
+  animation: r-183 36.7s linear infinite;
+  transform: rotate(273deg) translateX(200px);
+}
+
+@keyframes r-183 {
+  0% {
+    transform: rotate(273) translateX(200px);
+  }
+  100% {
+    transform: rotate(633deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(184) {
+  width: 4px;
+  height: 4px;
+  animation: r-184 31.9s linear infinite;
+  transform: rotate(41deg) translateX(209px);
+}
+
+@keyframes r-184 {
+  0% {
+    transform: rotate(41) translateX(209px);
+  }
+  100% {
+    transform: rotate(401deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(185) {
+  width: 2px;
+  height: 2px;
+  animation: r-185 38.5s linear infinite;
+  transform: rotate(126deg) translateX(208px);
+}
+
+@keyframes r-185 {
+  0% {
+    transform: rotate(126) translateX(208px);
+  }
+  100% {
+    transform: rotate(486deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(186) {
+  width: 2px;
+  height: 2px;
+  animation: r-186 28.6s linear infinite;
+  transform: rotate(19deg) translateX(204px);
+}
+
+@keyframes r-186 {
+  0% {
+    transform: rotate(19) translateX(204px);
+  }
+  100% {
+    transform: rotate(379deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(187) {
+  width: 4px;
+  height: 4px;
+  animation: r-187 32s linear infinite;
+  transform: rotate(290deg) translateX(195px);
+}
+
+@keyframes r-187 {
+  0% {
+    transform: rotate(290) translateX(195px);
+  }
+  100% {
+    transform: rotate(650deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(188) {
+  width: 2px;
+  height: 2px;
+  animation: r-188 21.5s linear infinite;
+  transform: rotate(318deg) translateX(191px);
+}
+
+@keyframes r-188 {
+  0% {
+    transform: rotate(318) translateX(191px);
+  }
+  100% {
+    transform: rotate(678deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(189) {
+  width: 4px;
+  height: 4px;
+  animation: r-189 15.6s linear infinite;
+  transform: rotate(247deg) translateX(206px);
+}
+
+@keyframes r-189 {
+  0% {
+    transform: rotate(247) translateX(206px);
+  }
+  100% {
+    transform: rotate(607deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(190) {
+  width: 2px;
+  height: 2px;
+  animation: r-190 24.4s linear infinite;
+  transform: rotate(12deg) translateX(196px);
+}
+
+@keyframes r-190 {
+  0% {
+    transform: rotate(12) translateX(196px);
+  }
+  100% {
+    transform: rotate(372deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(191) {
+  width: 3px;
+  height: 3px;
+  animation: r-191 36.3s linear infinite;
+  transform: rotate(309deg) translateX(197px);
+}
+
+@keyframes r-191 {
+  0% {
+    transform: rotate(309) translateX(197px);
+  }
+  100% {
+    transform: rotate(669deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(192) {
+  width: 2px;
+  height: 2px;
+  animation: r-192 19.4s linear infinite;
+  transform: rotate(259deg) translateX(201px);
+}
+
+@keyframes r-192 {
+  0% {
+    transform: rotate(259) translateX(201px);
+  }
+  100% {
+    transform: rotate(619deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(193) {
+  width: 2px;
+  height: 2px;
+  animation: r-193 26.4s linear infinite;
+  transform: rotate(55deg) translateX(195px);
+}
+
+@keyframes r-193 {
+  0% {
+    transform: rotate(55) translateX(195px);
+  }
+  100% {
+    transform: rotate(415deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(194) {
+  width: 3px;
+  height: 3px;
+  animation: r-194 18.8s linear infinite;
+  transform: rotate(182deg) translateX(194px);
+}
+
+@keyframes r-194 {
+  0% {
+    transform: rotate(182) translateX(194px);
+  }
+  100% {
+    transform: rotate(542deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(195) {
+  width: 4px;
+  height: 4px;
+  animation: r-195 29.1s linear infinite;
+  transform: rotate(167deg) translateX(198px);
+}
+
+@keyframes r-195 {
+  0% {
+    transform: rotate(167) translateX(198px);
+  }
+  100% {
+    transform: rotate(527deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(196) {
+  width: 2px;
+  height: 2px;
+  animation: r-196 44s linear infinite;
+  transform: rotate(135deg) translateX(209px);
+}
+
+@keyframes r-196 {
+  0% {
+    transform: rotate(135) translateX(209px);
+  }
+  100% {
+    transform: rotate(495deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(197) {
+  width: 3px;
+  height: 3px;
+  animation: r-197 23.5s linear infinite;
+  transform: rotate(357deg) translateX(205px);
+}
+
+@keyframes r-197 {
+  0% {
+    transform: rotate(357) translateX(205px);
+  }
+  100% {
+    transform: rotate(717deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(198) {
+  width: 2px;
+  height: 2px;
+  animation: r-198 20s linear infinite;
+  transform: rotate(246deg) translateX(208px);
+}
+
+@keyframes r-198 {
+  0% {
+    transform: rotate(246) translateX(208px);
+  }
+  100% {
+    transform: rotate(606deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(199) {
+  width: 3px;
+  height: 3px;
+  animation: r-199 25.1s linear infinite;
+  transform: rotate(160deg) translateX(202px);
+}
+
+@keyframes r-199 {
+  0% {
+    transform: rotate(160) translateX(202px);
+  }
+  100% {
+    transform: rotate(520deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(200) {
+  width: 4px;
+  height: 4px;
+  animation: r-200 25.4s linear infinite;
+  transform: rotate(112deg) translateX(196px);
+}
+
+@keyframes r-200 {
+  0% {
+    transform: rotate(112) translateX(196px);
+  }
+  100% {
+    transform: rotate(472deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(201) {
+  width: 3px;
+  height: 3px;
+  animation: r-201 34.5s linear infinite;
+  transform: rotate(19deg) translateX(192px);
+}
+
+@keyframes r-201 {
+  0% {
+    transform: rotate(19) translateX(192px);
+  }
+  100% {
+    transform: rotate(379deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(202) {
+  width: 4px;
+  height: 4px;
+  animation: r-202 17.6s linear infinite;
+  transform: rotate(11deg) translateX(195px);
+}
+
+@keyframes r-202 {
+  0% {
+    transform: rotate(11) translateX(195px);
+  }
+  100% {
+    transform: rotate(371deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(203) {
+  width: 2px;
+  height: 2px;
+  animation: r-203 15.8s linear infinite;
+  transform: rotate(2deg) translateX(196px);
+}
+
+@keyframes r-203 {
+  0% {
+    transform: rotate(2) translateX(196px);
+  }
+  100% {
+    transform: rotate(362deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(204) {
+  width: 2px;
+  height: 2px;
+  animation: r-204 39s linear infinite;
+  transform: rotate(50deg) translateX(191px);
+}
+
+@keyframes r-204 {
+  0% {
+    transform: rotate(50) translateX(191px);
+  }
+  100% {
+    transform: rotate(410deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(205) {
+  width: 4px;
+  height: 4px;
+  animation: r-205 38.8s linear infinite;
+  transform: rotate(182deg) translateX(197px);
+}
+
+@keyframes r-205 {
+  0% {
+    transform: rotate(182) translateX(197px);
+  }
+  100% {
+    transform: rotate(542deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(206) {
+  width: 2px;
+  height: 2px;
+  animation: r-206 24.6s linear infinite;
+  transform: rotate(258deg) translateX(198px);
+}
+
+@keyframes r-206 {
+  0% {
+    transform: rotate(258) translateX(198px);
+  }
+  100% {
+    transform: rotate(618deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(207) {
+  width: 3px;
+  height: 3px;
+  animation: r-207 43.8s linear infinite;
+  transform: rotate(133deg) translateX(195px);
+}
+
+@keyframes r-207 {
+  0% {
+    transform: rotate(133) translateX(195px);
+  }
+  100% {
+    transform: rotate(493deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(208) {
+  width: 4px;
+  height: 4px;
+  animation: r-208 19.2s linear infinite;
+  transform: rotate(131deg) translateX(199px);
+}
+
+@keyframes r-208 {
+  0% {
+    transform: rotate(131) translateX(199px);
+  }
+  100% {
+    transform: rotate(491deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(209) {
+  width: 4px;
+  height: 4px;
+  animation: r-209 31.1s linear infinite;
+  transform: rotate(55deg) translateX(193px);
+}
+
+@keyframes r-209 {
+  0% {
+    transform: rotate(55) translateX(193px);
+  }
+  100% {
+    transform: rotate(415deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(210) {
+  width: 4px;
+  height: 4px;
+  animation: r-210 15.3s linear infinite;
+  transform: rotate(73deg) translateX(207px);
+}
+
+@keyframes r-210 {
+  0% {
+    transform: rotate(73) translateX(207px);
+  }
+  100% {
+    transform: rotate(433deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(211) {
+  width: 4px;
+  height: 4px;
+  animation: r-211 23.6s linear infinite;
+  transform: rotate(38deg) translateX(206px);
+}
+
+@keyframes r-211 {
+  0% {
+    transform: rotate(38) translateX(206px);
+  }
+  100% {
+    transform: rotate(398deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(212) {
+  width: 4px;
+  height: 4px;
+  animation: r-212 33.4s linear infinite;
+  transform: rotate(118deg) translateX(196px);
+}
+
+@keyframes r-212 {
+  0% {
+    transform: rotate(118) translateX(196px);
+  }
+  100% {
+    transform: rotate(478deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(213) {
+  width: 3px;
+  height: 3px;
+  animation: r-213 15.9s linear infinite;
+  transform: rotate(163deg) translateX(203px);
+}
+
+@keyframes r-213 {
+  0% {
+    transform: rotate(163) translateX(203px);
+  }
+  100% {
+    transform: rotate(523deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(214) {
+  width: 4px;
+  height: 4px;
+  animation: r-214 30.7s linear infinite;
+  transform: rotate(234deg) translateX(194px);
+}
+
+@keyframes r-214 {
+  0% {
+    transform: rotate(234) translateX(194px);
+  }
+  100% {
+    transform: rotate(594deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(215) {
+  width: 3px;
+  height: 3px;
+  animation: r-215 37.8s linear infinite;
+  transform: rotate(302deg) translateX(202px);
+}
+
+@keyframes r-215 {
+  0% {
+    transform: rotate(302) translateX(202px);
+  }
+  100% {
+    transform: rotate(662deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(216) {
+  width: 4px;
+  height: 4px;
+  animation: r-216 28s linear infinite;
+  transform: rotate(180deg) translateX(192px);
+}
+
+@keyframes r-216 {
+  0% {
+    transform: rotate(180) translateX(192px);
+  }
+  100% {
+    transform: rotate(540deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(217) {
+  width: 2px;
+  height: 2px;
+  animation: r-217 39.4s linear infinite;
+  transform: rotate(354deg) translateX(203px);
+}
+
+@keyframes r-217 {
+  0% {
+    transform: rotate(354) translateX(203px);
+  }
+  100% {
+    transform: rotate(714deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(218) {
+  width: 2px;
+  height: 2px;
+  animation: r-218 40.5s linear infinite;
+  transform: rotate(55deg) translateX(195px);
+}
+
+@keyframes r-218 {
+  0% {
+    transform: rotate(55) translateX(195px);
+  }
+  100% {
+    transform: rotate(415deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(219) {
+  width: 3px;
+  height: 3px;
+  animation: r-219 27.7s linear infinite;
+  transform: rotate(71deg) translateX(205px);
+}
+
+@keyframes r-219 {
+  0% {
+    transform: rotate(71) translateX(205px);
+  }
+  100% {
+    transform: rotate(431deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(220) {
+  width: 2px;
+  height: 2px;
+  animation: r-220 30.3s linear infinite;
+  transform: rotate(259deg) translateX(199px);
+}
+
+@keyframes r-220 {
+  0% {
+    transform: rotate(259) translateX(199px);
+  }
+  100% {
+    transform: rotate(619deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(221) {
+  width: 3px;
+  height: 3px;
+  animation: r-221 28.9s linear infinite;
+  transform: rotate(181deg) translateX(191px);
+}
+
+@keyframes r-221 {
+  0% {
+    transform: rotate(181) translateX(191px);
+  }
+  100% {
+    transform: rotate(541deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(222) {
+  width: 3px;
+  height: 3px;
+  animation: r-222 26s linear infinite;
+  transform: rotate(278deg) translateX(194px);
+}
+
+@keyframes r-222 {
+  0% {
+    transform: rotate(278) translateX(194px);
+  }
+  100% {
+    transform: rotate(638deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(223) {
+  width: 2px;
+  height: 2px;
+  animation: r-223 35.8s linear infinite;
+  transform: rotate(310deg) translateX(191px);
+}
+
+@keyframes r-223 {
+  0% {
+    transform: rotate(310) translateX(191px);
+  }
+  100% {
+    transform: rotate(670deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(224) {
+  width: 3px;
+  height: 3px;
+  animation: r-224 41.6s linear infinite;
+  transform: rotate(281deg) translateX(199px);
+}
+
+@keyframes r-224 {
+  0% {
+    transform: rotate(281) translateX(199px);
+  }
+  100% {
+    transform: rotate(641deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(225) {
+  width: 3px;
+  height: 3px;
+  animation: r-225 15.5s linear infinite;
+  transform: rotate(83deg) translateX(204px);
+}
+
+@keyframes r-225 {
+  0% {
+    transform: rotate(83) translateX(204px);
+  }
+  100% {
+    transform: rotate(443deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(226) {
+  width: 2px;
+  height: 2px;
+  animation: r-226 42.4s linear infinite;
+  transform: rotate(349deg) translateX(198px);
+}
+
+@keyframes r-226 {
+  0% {
+    transform: rotate(349) translateX(198px);
+  }
+  100% {
+    transform: rotate(709deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(227) {
+  width: 2px;
+  height: 2px;
+  animation: r-227 30.3s linear infinite;
+  transform: rotate(253deg) translateX(193px);
+}
+
+@keyframes r-227 {
+  0% {
+    transform: rotate(253) translateX(193px);
+  }
+  100% {
+    transform: rotate(613deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(228) {
+  width: 4px;
+  height: 4px;
+  animation: r-228 16.7s linear infinite;
+  transform: rotate(312deg) translateX(197px);
+}
+
+@keyframes r-228 {
+  0% {
+    transform: rotate(312) translateX(197px);
+  }
+  100% {
+    transform: rotate(672deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(229) {
+  width: 2px;
+  height: 2px;
+  animation: r-229 20.7s linear infinite;
+  transform: rotate(126deg) translateX(194px);
+}
+
+@keyframes r-229 {
+  0% {
+    transform: rotate(126) translateX(194px);
+  }
+  100% {
+    transform: rotate(486deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(230) {
+  width: 4px;
+  height: 4px;
+  animation: r-230 26.8s linear infinite;
+  transform: rotate(63deg) translateX(206px);
+}
+
+@keyframes r-230 {
+  0% {
+    transform: rotate(63) translateX(206px);
+  }
+  100% {
+    transform: rotate(423deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(231) {
+  width: 4px;
+  height: 4px;
+  animation: r-231 39.7s linear infinite;
+  transform: rotate(192deg) translateX(201px);
+}
+
+@keyframes r-231 {
+  0% {
+    transform: rotate(192) translateX(201px);
+  }
+  100% {
+    transform: rotate(552deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(232) {
+  width: 2px;
+  height: 2px;
+  animation: r-232 38.6s linear infinite;
+  transform: rotate(170deg) translateX(209px);
+}
+
+@keyframes r-232 {
+  0% {
+    transform: rotate(170) translateX(209px);
+  }
+  100% {
+    transform: rotate(530deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(233) {
+  width: 2px;
+  height: 2px;
+  animation: r-233 33.7s linear infinite;
+  transform: rotate(51deg) translateX(207px);
+}
+
+@keyframes r-233 {
+  0% {
+    transform: rotate(51) translateX(207px);
+  }
+  100% {
+    transform: rotate(411deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(234) {
+  width: 2px;
+  height: 2px;
+  animation: r-234 19.8s linear infinite;
+  transform: rotate(165deg) translateX(195px);
+}
+
+@keyframes r-234 {
+  0% {
+    transform: rotate(165) translateX(195px);
+  }
+  100% {
+    transform: rotate(525deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(235) {
+  width: 2px;
+  height: 2px;
+  animation: r-235 38.4s linear infinite;
+  transform: rotate(283deg) translateX(201px);
+}
+
+@keyframes r-235 {
+  0% {
+    transform: rotate(283) translateX(201px);
+  }
+  100% {
+    transform: rotate(643deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(236) {
+  width: 4px;
+  height: 4px;
+  animation: r-236 21.5s linear infinite;
+  transform: rotate(186deg) translateX(204px);
+}
+
+@keyframes r-236 {
+  0% {
+    transform: rotate(186) translateX(204px);
+  }
+  100% {
+    transform: rotate(546deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(237) {
+  width: 2px;
+  height: 2px;
+  animation: r-237 25.4s linear infinite;
+  transform: rotate(71deg) translateX(209px);
+}
+
+@keyframes r-237 {
+  0% {
+    transform: rotate(71) translateX(209px);
+  }
+  100% {
+    transform: rotate(431deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(238) {
+  width: 3px;
+  height: 3px;
+  animation: r-238 30.5s linear infinite;
+  transform: rotate(156deg) translateX(194px);
+}
+
+@keyframes r-238 {
+  0% {
+    transform: rotate(156) translateX(194px);
+  }
+  100% {
+    transform: rotate(516deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(239) {
+  width: 3px;
+  height: 3px;
+  animation: r-239 36.8s linear infinite;
+  transform: rotate(9deg) translateX(203px);
+}
+
+@keyframes r-239 {
+  0% {
+    transform: rotate(9) translateX(203px);
+  }
+  100% {
+    transform: rotate(369deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(240) {
+  width: 3px;
+  height: 3px;
+  animation: r-240 32.9s linear infinite;
+  transform: rotate(160deg) translateX(194px);
+}
+
+@keyframes r-240 {
+  0% {
+    transform: rotate(160) translateX(194px);
+  }
+  100% {
+    transform: rotate(520deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(241) {
+  width: 2px;
+  height: 2px;
+  animation: r-241 22.7s linear infinite;
+  transform: rotate(323deg) translateX(203px);
+}
+
+@keyframes r-241 {
+  0% {
+    transform: rotate(323) translateX(203px);
+  }
+  100% {
+    transform: rotate(683deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(242) {
+  width: 4px;
+  height: 4px;
+  animation: r-242 21.2s linear infinite;
+  transform: rotate(201deg) translateX(204px);
+}
+
+@keyframes r-242 {
+  0% {
+    transform: rotate(201) translateX(204px);
+  }
+  100% {
+    transform: rotate(561deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(243) {
+  width: 2px;
+  height: 2px;
+  animation: r-243 30.1s linear infinite;
+  transform: rotate(275deg) translateX(207px);
+}
+
+@keyframes r-243 {
+  0% {
+    transform: rotate(275) translateX(207px);
+  }
+  100% {
+    transform: rotate(635deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(244) {
+  width: 4px;
+  height: 4px;
+  animation: r-244 35.3s linear infinite;
+  transform: rotate(243deg) translateX(199px);
+}
+
+@keyframes r-244 {
+  0% {
+    transform: rotate(243) translateX(199px);
+  }
+  100% {
+    transform: rotate(603deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(245) {
+  width: 4px;
+  height: 4px;
+  animation: r-245 26s linear infinite;
+  transform: rotate(311deg) translateX(194px);
+}
+
+@keyframes r-245 {
+  0% {
+    transform: rotate(311) translateX(194px);
+  }
+  100% {
+    transform: rotate(671deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(246) {
+  width: 3px;
+  height: 3px;
+  animation: r-246 30s linear infinite;
+  transform: rotate(9deg) translateX(203px);
+}
+
+@keyframes r-246 {
+  0% {
+    transform: rotate(9) translateX(203px);
+  }
+  100% {
+    transform: rotate(369deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(247) {
+  width: 3px;
+  height: 3px;
+  animation: r-247 35.3s linear infinite;
+  transform: rotate(322deg) translateX(210px);
+}
+
+@keyframes r-247 {
+  0% {
+    transform: rotate(322) translateX(210px);
+  }
+  100% {
+    transform: rotate(682deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(248) {
+  width: 2px;
+  height: 2px;
+  animation: r-248 28.8s linear infinite;
+  transform: rotate(193deg) translateX(199px);
+}
+
+@keyframes r-248 {
+  0% {
+    transform: rotate(193) translateX(199px);
+  }
+  100% {
+    transform: rotate(553deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(249) {
+  width: 2px;
+  height: 2px;
+  animation: r-249 23.7s linear infinite;
+  transform: rotate(295deg) translateX(192px);
+}
+
+@keyframes r-249 {
+  0% {
+    transform: rotate(295) translateX(192px);
+  }
+  100% {
+    transform: rotate(655deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(250) {
+  width: 4px;
+  height: 4px;
+  animation: r-250 20.3s linear infinite;
+  transform: rotate(214deg) translateX(202px);
+}
+
+@keyframes r-250 {
+  0% {
+    transform: rotate(214) translateX(202px);
+  }
+  100% {
+    transform: rotate(574deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(251) {
+  width: 2px;
+  height: 2px;
+  animation: r-251 22s linear infinite;
+  transform: rotate(264deg) translateX(201px);
+}
+
+@keyframes r-251 {
+  0% {
+    transform: rotate(264) translateX(201px);
+  }
+  100% {
+    transform: rotate(624deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(252) {
+  width: 2px;
+  height: 2px;
+  animation: r-252 25.8s linear infinite;
+  transform: rotate(300deg) translateX(208px);
+}
+
+@keyframes r-252 {
+  0% {
+    transform: rotate(300) translateX(208px);
+  }
+  100% {
+    transform: rotate(660deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(253) {
+  width: 3px;
+  height: 3px;
+  animation: r-253 41.3s linear infinite;
+  transform: rotate(145deg) translateX(192px);
+}
+
+@keyframes r-253 {
+  0% {
+    transform: rotate(145) translateX(192px);
+  }
+  100% {
+    transform: rotate(505deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(254) {
+  width: 2px;
+  height: 2px;
+  animation: r-254 41.5s linear infinite;
+  transform: rotate(116deg) translateX(207px);
+}
+
+@keyframes r-254 {
+  0% {
+    transform: rotate(116) translateX(207px);
+  }
+  100% {
+    transform: rotate(476deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(255) {
+  width: 4px;
+  height: 4px;
+  animation: r-255 40.6s linear infinite;
+  transform: rotate(127deg) translateX(210px);
+}
+
+@keyframes r-255 {
+  0% {
+    transform: rotate(127) translateX(210px);
+  }
+  100% {
+    transform: rotate(487deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(256) {
+  width: 4px;
+  height: 4px;
+  animation: r-256 34.2s linear infinite;
+  transform: rotate(17deg) translateX(199px);
+}
+
+@keyframes r-256 {
+  0% {
+    transform: rotate(17) translateX(199px);
+  }
+  100% {
+    transform: rotate(377deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(257) {
+  width: 4px;
+  height: 4px;
+  animation: r-257 31s linear infinite;
+  transform: rotate(300deg) translateX(206px);
+}
+
+@keyframes r-257 {
+  0% {
+    transform: rotate(300) translateX(206px);
+  }
+  100% {
+    transform: rotate(660deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(258) {
+  width: 4px;
+  height: 4px;
+  animation: r-258 29s linear infinite;
+  transform: rotate(241deg) translateX(205px);
+}
+
+@keyframes r-258 {
+  0% {
+    transform: rotate(241) translateX(205px);
+  }
+  100% {
+    transform: rotate(601deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(259) {
+  width: 2px;
+  height: 2px;
+  animation: r-259 36.9s linear infinite;
+  transform: rotate(357deg) translateX(200px);
+}
+
+@keyframes r-259 {
+  0% {
+    transform: rotate(357) translateX(200px);
+  }
+  100% {
+    transform: rotate(717deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(260) {
+  width: 4px;
+  height: 4px;
+  animation: r-260 26.5s linear infinite;
+  transform: rotate(336deg) translateX(206px);
+}
+
+@keyframes r-260 {
+  0% {
+    transform: rotate(336) translateX(206px);
+  }
+  100% {
+    transform: rotate(696deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(261) {
+  width: 3px;
+  height: 3px;
+  animation: r-261 17s linear infinite;
+  transform: rotate(117deg) translateX(195px);
+}
+
+@keyframes r-261 {
+  0% {
+    transform: rotate(117) translateX(195px);
+  }
+  100% {
+    transform: rotate(477deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(262) {
+  width: 2px;
+  height: 2px;
+  animation: r-262 16.9s linear infinite;
+  transform: rotate(354deg) translateX(208px);
+}
+
+@keyframes r-262 {
+  0% {
+    transform: rotate(354) translateX(208px);
+  }
+  100% {
+    transform: rotate(714deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(263) {
+  width: 2px;
+  height: 2px;
+  animation: r-263 22s linear infinite;
+  transform: rotate(88deg) translateX(208px);
+}
+
+@keyframes r-263 {
+  0% {
+    transform: rotate(88) translateX(208px);
+  }
+  100% {
+    transform: rotate(448deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(264) {
+  width: 4px;
+  height: 4px;
+  animation: r-264 42.4s linear infinite;
+  transform: rotate(103deg) translateX(204px);
+}
+
+@keyframes r-264 {
+  0% {
+    transform: rotate(103) translateX(204px);
+  }
+  100% {
+    transform: rotate(463deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(265) {
+  width: 3px;
+  height: 3px;
+  animation: r-265 32.1s linear infinite;
+  transform: rotate(27deg) translateX(205px);
+}
+
+@keyframes r-265 {
+  0% {
+    transform: rotate(27) translateX(205px);
+  }
+  100% {
+    transform: rotate(387deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(266) {
+  width: 4px;
+  height: 4px;
+  animation: r-266 35s linear infinite;
+  transform: rotate(359deg) translateX(207px);
+}
+
+@keyframes r-266 {
+  0% {
+    transform: rotate(359) translateX(207px);
+  }
+  100% {
+    transform: rotate(719deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(267) {
+  width: 3px;
+  height: 3px;
+  animation: r-267 33.2s linear infinite;
+  transform: rotate(222deg) translateX(205px);
+}
+
+@keyframes r-267 {
+  0% {
+    transform: rotate(222) translateX(205px);
+  }
+  100% {
+    transform: rotate(582deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(268) {
+  width: 4px;
+  height: 4px;
+  animation: r-268 27.5s linear infinite;
+  transform: rotate(127deg) translateX(210px);
+}
+
+@keyframes r-268 {
+  0% {
+    transform: rotate(127) translateX(210px);
+  }
+  100% {
+    transform: rotate(487deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(269) {
+  width: 4px;
+  height: 4px;
+  animation: r-269 25.3s linear infinite;
+  transform: rotate(131deg) translateX(194px);
+}
+
+@keyframes r-269 {
+  0% {
+    transform: rotate(131) translateX(194px);
+  }
+  100% {
+    transform: rotate(491deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(270) {
+  width: 3px;
+  height: 3px;
+  animation: r-270 43.8s linear infinite;
+  transform: rotate(304deg) translateX(208px);
+}
+
+@keyframes r-270 {
+  0% {
+    transform: rotate(304) translateX(208px);
+  }
+  100% {
+    transform: rotate(664deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(271) {
+  width: 3px;
+  height: 3px;
+  animation: r-271 35s linear infinite;
+  transform: rotate(345deg) translateX(202px);
+}
+
+@keyframes r-271 {
+  0% {
+    transform: rotate(345) translateX(202px);
+  }
+  100% {
+    transform: rotate(705deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(272) {
+  width: 4px;
+  height: 4px;
+  animation: r-272 16.1s linear infinite;
+  transform: rotate(34deg) translateX(199px);
+}
+
+@keyframes r-272 {
+  0% {
+    transform: rotate(34) translateX(199px);
+  }
+  100% {
+    transform: rotate(394deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(273) {
+  width: 4px;
+  height: 4px;
+  animation: r-273 44s linear infinite;
+  transform: rotate(311deg) translateX(205px);
+}
+
+@keyframes r-273 {
+  0% {
+    transform: rotate(311) translateX(205px);
+  }
+  100% {
+    transform: rotate(671deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(274) {
+  width: 2px;
+  height: 2px;
+  animation: r-274 24.3s linear infinite;
+  transform: rotate(325deg) translateX(197px);
+}
+
+@keyframes r-274 {
+  0% {
+    transform: rotate(325) translateX(197px);
+  }
+  100% {
+    transform: rotate(685deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(275) {
+  width: 3px;
+  height: 3px;
+  animation: r-275 23.2s linear infinite;
+  transform: rotate(14deg) translateX(208px);
+}
+
+@keyframes r-275 {
+  0% {
+    transform: rotate(14) translateX(208px);
+  }
+  100% {
+    transform: rotate(374deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(276) {
+  width: 2px;
+  height: 2px;
+  animation: r-276 44.2s linear infinite;
+  transform: rotate(267deg) translateX(198px);
+}
+
+@keyframes r-276 {
+  0% {
+    transform: rotate(267) translateX(198px);
+  }
+  100% {
+    transform: rotate(627deg) translateX(198px);
+  }
+}
+.asteroid:nth-child(277) {
+  width: 2px;
+  height: 2px;
+  animation: r-277 41.4s linear infinite;
+  transform: rotate(352deg) translateX(195px);
+}
+
+@keyframes r-277 {
+  0% {
+    transform: rotate(352) translateX(195px);
+  }
+  100% {
+    transform: rotate(712deg) translateX(195px);
+  }
+}
+.asteroid:nth-child(278) {
+  width: 2px;
+  height: 2px;
+  animation: r-278 24.2s linear infinite;
+  transform: rotate(160deg) translateX(202px);
+}
+
+@keyframes r-278 {
+  0% {
+    transform: rotate(160) translateX(202px);
+  }
+  100% {
+    transform: rotate(520deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(279) {
+  width: 3px;
+  height: 3px;
+  animation: r-279 16.3s linear infinite;
+  transform: rotate(26deg) translateX(202px);
+}
+
+@keyframes r-279 {
+  0% {
+    transform: rotate(26) translateX(202px);
+  }
+  100% {
+    transform: rotate(386deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(280) {
+  width: 2px;
+  height: 2px;
+  animation: r-280 30.9s linear infinite;
+  transform: rotate(216deg) translateX(201px);
+}
+
+@keyframes r-280 {
+  0% {
+    transform: rotate(216) translateX(201px);
+  }
+  100% {
+    transform: rotate(576deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(281) {
+  width: 2px;
+  height: 2px;
+  animation: r-281 21.9s linear infinite;
+  transform: rotate(304deg) translateX(197px);
+}
+
+@keyframes r-281 {
+  0% {
+    transform: rotate(304) translateX(197px);
+  }
+  100% {
+    transform: rotate(664deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(282) {
+  width: 2px;
+  height: 2px;
+  animation: r-282 35.8s linear infinite;
+  transform: rotate(60deg) translateX(210px);
+}
+
+@keyframes r-282 {
+  0% {
+    transform: rotate(60) translateX(210px);
+  }
+  100% {
+    transform: rotate(420deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(283) {
+  width: 2px;
+  height: 2px;
+  animation: r-283 42.3s linear infinite;
+  transform: rotate(127deg) translateX(210px);
+}
+
+@keyframes r-283 {
+  0% {
+    transform: rotate(127) translateX(210px);
+  }
+  100% {
+    transform: rotate(487deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(284) {
+  width: 2px;
+  height: 2px;
+  animation: r-284 35.8s linear infinite;
+  transform: rotate(343deg) translateX(208px);
+}
+
+@keyframes r-284 {
+  0% {
+    transform: rotate(343) translateX(208px);
+  }
+  100% {
+    transform: rotate(703deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(285) {
+  width: 3px;
+  height: 3px;
+  animation: r-285 15.7s linear infinite;
+  transform: rotate(19deg) translateX(200px);
+}
+
+@keyframes r-285 {
+  0% {
+    transform: rotate(19) translateX(200px);
+  }
+  100% {
+    transform: rotate(379deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(286) {
+  width: 4px;
+  height: 4px;
+  animation: r-286 34.7s linear infinite;
+  transform: rotate(296deg) translateX(210px);
+}
+
+@keyframes r-286 {
+  0% {
+    transform: rotate(296) translateX(210px);
+  }
+  100% {
+    transform: rotate(656deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(287) {
+  width: 3px;
+  height: 3px;
+  animation: r-287 18.1s linear infinite;
+  transform: rotate(257deg) translateX(199px);
+}
+
+@keyframes r-287 {
+  0% {
+    transform: rotate(257) translateX(199px);
+  }
+  100% {
+    transform: rotate(617deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(288) {
+  width: 2px;
+  height: 2px;
+  animation: r-288 15.9s linear infinite;
+  transform: rotate(129deg) translateX(191px);
+}
+
+@keyframes r-288 {
+  0% {
+    transform: rotate(129) translateX(191px);
+  }
+  100% {
+    transform: rotate(489deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(289) {
+  width: 3px;
+  height: 3px;
+  animation: r-289 34.8s linear infinite;
+  transform: rotate(333deg) translateX(205px);
+}
+
+@keyframes r-289 {
+  0% {
+    transform: rotate(333) translateX(205px);
+  }
+  100% {
+    transform: rotate(693deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(290) {
+  width: 4px;
+  height: 4px;
+  animation: r-290 30.8s linear infinite;
+  transform: rotate(94deg) translateX(191px);
+}
+
+@keyframes r-290 {
+  0% {
+    transform: rotate(94) translateX(191px);
+  }
+  100% {
+    transform: rotate(454deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(291) {
+  width: 3px;
+  height: 3px;
+  animation: r-291 32.3s linear infinite;
+  transform: rotate(331deg) translateX(206px);
+}
+
+@keyframes r-291 {
+  0% {
+    transform: rotate(331) translateX(206px);
+  }
+  100% {
+    transform: rotate(691deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(292) {
+  width: 2px;
+  height: 2px;
+  animation: r-292 40.6s linear infinite;
+  transform: rotate(316deg) translateX(206px);
+}
+
+@keyframes r-292 {
+  0% {
+    transform: rotate(316) translateX(206px);
+  }
+  100% {
+    transform: rotate(676deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(293) {
+  width: 3px;
+  height: 3px;
+  animation: r-293 29.9s linear infinite;
+  transform: rotate(50deg) translateX(200px);
+}
+
+@keyframes r-293 {
+  0% {
+    transform: rotate(50) translateX(200px);
+  }
+  100% {
+    transform: rotate(410deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(294) {
+  width: 3px;
+  height: 3px;
+  animation: r-294 38.5s linear infinite;
+  transform: rotate(173deg) translateX(191px);
+}
+
+@keyframes r-294 {
+  0% {
+    transform: rotate(173) translateX(191px);
+  }
+  100% {
+    transform: rotate(533deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(295) {
+  width: 4px;
+  height: 4px;
+  animation: r-295 39.4s linear infinite;
+  transform: rotate(262deg) translateX(205px);
+}
+
+@keyframes r-295 {
+  0% {
+    transform: rotate(262) translateX(205px);
+  }
+  100% {
+    transform: rotate(622deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(296) {
+  width: 2px;
+  height: 2px;
+  animation: r-296 18.2s linear infinite;
+  transform: rotate(257deg) translateX(204px);
+}
+
+@keyframes r-296 {
+  0% {
+    transform: rotate(257) translateX(204px);
+  }
+  100% {
+    transform: rotate(617deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(297) {
+  width: 2px;
+  height: 2px;
+  animation: r-297 40.8s linear infinite;
+  transform: rotate(58deg) translateX(197px);
+}
+
+@keyframes r-297 {
+  0% {
+    transform: rotate(58) translateX(197px);
+  }
+  100% {
+    transform: rotate(418deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(298) {
+  width: 2px;
+  height: 2px;
+  animation: r-298 24.8s linear infinite;
+  transform: rotate(228deg) translateX(194px);
+}
+
+@keyframes r-298 {
+  0% {
+    transform: rotate(228) translateX(194px);
+  }
+  100% {
+    transform: rotate(588deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(299) {
+  width: 2px;
+  height: 2px;
+  animation: r-299 18s linear infinite;
+  transform: rotate(357deg) translateX(209px);
+}
+
+@keyframes r-299 {
+  0% {
+    transform: rotate(357) translateX(209px);
+  }
+  100% {
+    transform: rotate(717deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(300) {
+  width: 3px;
+  height: 3px;
+  animation: r-300 25.5s linear infinite;
+  transform: rotate(37deg) translateX(196px);
+}
+
+@keyframes r-300 {
+  0% {
+    transform: rotate(37) translateX(196px);
+  }
+  100% {
+    transform: rotate(397deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(301) {
+  width: 4px;
+  height: 4px;
+  animation: r-301 35s linear infinite;
+  transform: rotate(264deg) translateX(206px);
+}
+
+@keyframes r-301 {
+  0% {
+    transform: rotate(264) translateX(206px);
+  }
+  100% {
+    transform: rotate(624deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(302) {
+  width: 4px;
+  height: 4px;
+  animation: r-302 25.5s linear infinite;
+  transform: rotate(335deg) translateX(197px);
+}
+
+@keyframes r-302 {
+  0% {
+    transform: rotate(335) translateX(197px);
+  }
+  100% {
+    transform: rotate(695deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(303) {
+  width: 4px;
+  height: 4px;
+  animation: r-303 21.5s linear infinite;
+  transform: rotate(288deg) translateX(202px);
+}
+
+@keyframes r-303 {
+  0% {
+    transform: rotate(288) translateX(202px);
+  }
+  100% {
+    transform: rotate(648deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(304) {
+  width: 2px;
+  height: 2px;
+  animation: r-304 27.8s linear infinite;
+  transform: rotate(33deg) translateX(199px);
+}
+
+@keyframes r-304 {
+  0% {
+    transform: rotate(33) translateX(199px);
+  }
+  100% {
+    transform: rotate(393deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(305) {
+  width: 4px;
+  height: 4px;
+  animation: r-305 30s linear infinite;
+  transform: rotate(298deg) translateX(199px);
+}
+
+@keyframes r-305 {
+  0% {
+    transform: rotate(298) translateX(199px);
+  }
+  100% {
+    transform: rotate(658deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(306) {
+  width: 4px;
+  height: 4px;
+  animation: r-306 22s linear infinite;
+  transform: rotate(71deg) translateX(194px);
+}
+
+@keyframes r-306 {
+  0% {
+    transform: rotate(71) translateX(194px);
+  }
+  100% {
+    transform: rotate(431deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(307) {
+  width: 2px;
+  height: 2px;
+  animation: r-307 40.9s linear infinite;
+  transform: rotate(309deg) translateX(205px);
+}
+
+@keyframes r-307 {
+  0% {
+    transform: rotate(309) translateX(205px);
+  }
+  100% {
+    transform: rotate(669deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(308) {
+  width: 4px;
+  height: 4px;
+  animation: r-308 18.2s linear infinite;
+  transform: rotate(56deg) translateX(209px);
+}
+
+@keyframes r-308 {
+  0% {
+    transform: rotate(56) translateX(209px);
+  }
+  100% {
+    transform: rotate(416deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(309) {
+  width: 3px;
+  height: 3px;
+  animation: r-309 31.2s linear infinite;
+  transform: rotate(191deg) translateX(208px);
+}
+
+@keyframes r-309 {
+  0% {
+    transform: rotate(191) translateX(208px);
+  }
+  100% {
+    transform: rotate(551deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(310) {
+  width: 3px;
+  height: 3px;
+  animation: r-310 33.1s linear infinite;
+  transform: rotate(244deg) translateX(193px);
+}
+
+@keyframes r-310 {
+  0% {
+    transform: rotate(244) translateX(193px);
+  }
+  100% {
+    transform: rotate(604deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(311) {
+  width: 4px;
+  height: 4px;
+  animation: r-311 38.2s linear infinite;
+  transform: rotate(177deg) translateX(205px);
+}
+
+@keyframes r-311 {
+  0% {
+    transform: rotate(177) translateX(205px);
+  }
+  100% {
+    transform: rotate(537deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(312) {
+  width: 3px;
+  height: 3px;
+  animation: r-312 16.8s linear infinite;
+  transform: rotate(154deg) translateX(206px);
+}
+
+@keyframes r-312 {
+  0% {
+    transform: rotate(154) translateX(206px);
+  }
+  100% {
+    transform: rotate(514deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(313) {
+  width: 3px;
+  height: 3px;
+  animation: r-313 27.3s linear infinite;
+  transform: rotate(272deg) translateX(209px);
+}
+
+@keyframes r-313 {
+  0% {
+    transform: rotate(272) translateX(209px);
+  }
+  100% {
+    transform: rotate(632deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(314) {
+  width: 3px;
+  height: 3px;
+  animation: r-314 44.3s linear infinite;
+  transform: rotate(180deg) translateX(196px);
+}
+
+@keyframes r-314 {
+  0% {
+    transform: rotate(180) translateX(196px);
+  }
+  100% {
+    transform: rotate(540deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(315) {
+  width: 2px;
+  height: 2px;
+  animation: r-315 19.8s linear infinite;
+  transform: rotate(246deg) translateX(197px);
+}
+
+@keyframes r-315 {
+  0% {
+    transform: rotate(246) translateX(197px);
+  }
+  100% {
+    transform: rotate(606deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(316) {
+  width: 4px;
+  height: 4px;
+  animation: r-316 26.4s linear infinite;
+  transform: rotate(144deg) translateX(201px);
+}
+
+@keyframes r-316 {
+  0% {
+    transform: rotate(144) translateX(201px);
+  }
+  100% {
+    transform: rotate(504deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(317) {
+  width: 4px;
+  height: 4px;
+  animation: r-317 39.6s linear infinite;
+  transform: rotate(267deg) translateX(201px);
+}
+
+@keyframes r-317 {
+  0% {
+    transform: rotate(267) translateX(201px);
+  }
+  100% {
+    transform: rotate(627deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(318) {
+  width: 3px;
+  height: 3px;
+  animation: r-318 36.7s linear infinite;
+  transform: rotate(294deg) translateX(193px);
+}
+
+@keyframes r-318 {
+  0% {
+    transform: rotate(294) translateX(193px);
+  }
+  100% {
+    transform: rotate(654deg) translateX(193px);
+  }
+}
+.asteroid:nth-child(319) {
+  width: 2px;
+  height: 2px;
+  animation: r-319 40.3s linear infinite;
+  transform: rotate(310deg) translateX(209px);
+}
+
+@keyframes r-319 {
+  0% {
+    transform: rotate(310) translateX(209px);
+  }
+  100% {
+    transform: rotate(670deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(320) {
+  width: 2px;
+  height: 2px;
+  animation: r-320 17.6s linear infinite;
+  transform: rotate(118deg) translateX(209px);
+}
+
+@keyframes r-320 {
+  0% {
+    transform: rotate(118) translateX(209px);
+  }
+  100% {
+    transform: rotate(478deg) translateX(209px);
+  }
+}
+.asteroid:nth-child(321) {
+  width: 3px;
+  height: 3px;
+  animation: r-321 16.6s linear infinite;
+  transform: rotate(31deg) translateX(205px);
+}
+
+@keyframes r-321 {
+  0% {
+    transform: rotate(31) translateX(205px);
+  }
+  100% {
+    transform: rotate(391deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(322) {
+  width: 2px;
+  height: 2px;
+  animation: r-322 20.6s linear infinite;
+  transform: rotate(223deg) translateX(202px);
+}
+
+@keyframes r-322 {
+  0% {
+    transform: rotate(223) translateX(202px);
+  }
+  100% {
+    transform: rotate(583deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(323) {
+  width: 2px;
+  height: 2px;
+  animation: r-323 41.8s linear infinite;
+  transform: rotate(173deg) translateX(201px);
+}
+
+@keyframes r-323 {
+  0% {
+    transform: rotate(173) translateX(201px);
+  }
+  100% {
+    transform: rotate(533deg) translateX(201px);
+  }
+}
+.asteroid:nth-child(324) {
+  width: 4px;
+  height: 4px;
+  animation: r-324 26.5s linear infinite;
+  transform: rotate(94deg) translateX(191px);
+}
+
+@keyframes r-324 {
+  0% {
+    transform: rotate(94) translateX(191px);
+  }
+  100% {
+    transform: rotate(454deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(325) {
+  width: 3px;
+  height: 3px;
+  animation: r-325 16.4s linear infinite;
+  transform: rotate(30deg) translateX(199px);
+}
+
+@keyframes r-325 {
+  0% {
+    transform: rotate(30) translateX(199px);
+  }
+  100% {
+    transform: rotate(390deg) translateX(199px);
+  }
+}
+.asteroid:nth-child(326) {
+  width: 2px;
+  height: 2px;
+  animation: r-326 34.8s linear infinite;
+  transform: rotate(165deg) translateX(206px);
+}
+
+@keyframes r-326 {
+  0% {
+    transform: rotate(165) translateX(206px);
+  }
+  100% {
+    transform: rotate(525deg) translateX(206px);
+  }
+}
+.asteroid:nth-child(327) {
+  width: 4px;
+  height: 4px;
+  animation: r-327 35s linear infinite;
+  transform: rotate(356deg) translateX(208px);
+}
+
+@keyframes r-327 {
+  0% {
+    transform: rotate(356) translateX(208px);
+  }
+  100% {
+    transform: rotate(716deg) translateX(208px);
+  }
+}
+.asteroid:nth-child(328) {
+  width: 4px;
+  height: 4px;
+  animation: r-328 18.7s linear infinite;
+  transform: rotate(189deg) translateX(200px);
+}
+
+@keyframes r-328 {
+  0% {
+    transform: rotate(189) translateX(200px);
+  }
+  100% {
+    transform: rotate(549deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(329) {
+  width: 4px;
+  height: 4px;
+  animation: r-329 29.8s linear infinite;
+  transform: rotate(129deg) translateX(204px);
+}
+
+@keyframes r-329 {
+  0% {
+    transform: rotate(129) translateX(204px);
+  }
+  100% {
+    transform: rotate(489deg) translateX(204px);
+  }
+}
+.asteroid:nth-child(330) {
+  width: 4px;
+  height: 4px;
+  animation: r-330 28.4s linear infinite;
+  transform: rotate(350deg) translateX(210px);
+}
+
+@keyframes r-330 {
+  0% {
+    transform: rotate(350) translateX(210px);
+  }
+  100% {
+    transform: rotate(710deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(331) {
+  width: 4px;
+  height: 4px;
+  animation: r-331 24.8s linear infinite;
+  transform: rotate(352deg) translateX(200px);
+}
+
+@keyframes r-331 {
+  0% {
+    transform: rotate(352) translateX(200px);
+  }
+  100% {
+    transform: rotate(712deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(332) {
+  width: 4px;
+  height: 4px;
+  animation: r-332 31.8s linear infinite;
+  transform: rotate(47deg) translateX(191px);
+}
+
+@keyframes r-332 {
+  0% {
+    transform: rotate(47) translateX(191px);
+  }
+  100% {
+    transform: rotate(407deg) translateX(191px);
+  }
+}
+.asteroid:nth-child(333) {
+  width: 4px;
+  height: 4px;
+  animation: r-333 19.2s linear infinite;
+  transform: rotate(326deg) translateX(205px);
+}
+
+@keyframes r-333 {
+  0% {
+    transform: rotate(326) translateX(205px);
+  }
+  100% {
+    transform: rotate(686deg) translateX(205px);
+  }
+}
+.asteroid:nth-child(334) {
+  width: 2px;
+  height: 2px;
+  animation: r-334 41.4s linear infinite;
+  transform: rotate(153deg) translateX(197px);
+}
+
+@keyframes r-334 {
+  0% {
+    transform: rotate(153) translateX(197px);
+  }
+  100% {
+    transform: rotate(513deg) translateX(197px);
+  }
+}
+.asteroid:nth-child(335) {
+  width: 3px;
+  height: 3px;
+  animation: r-335 28.6s linear infinite;
+  transform: rotate(349deg) translateX(203px);
+}
+
+@keyframes r-335 {
+  0% {
+    transform: rotate(349) translateX(203px);
+  }
+  100% {
+    transform: rotate(709deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(336) {
+  width: 4px;
+  height: 4px;
+  animation: r-336 37.8s linear infinite;
+  transform: rotate(214deg) translateX(196px);
+}
+
+@keyframes r-336 {
+  0% {
+    transform: rotate(214) translateX(196px);
+  }
+  100% {
+    transform: rotate(574deg) translateX(196px);
+  }
+}
+.asteroid:nth-child(337) {
+  width: 4px;
+  height: 4px;
+  animation: r-337 29.8s linear infinite;
+  transform: rotate(50deg) translateX(203px);
+}
+
+@keyframes r-337 {
+  0% {
+    transform: rotate(50) translateX(203px);
+  }
+  100% {
+    transform: rotate(410deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(338) {
+  width: 4px;
+  height: 4px;
+  animation: r-338 23.4s linear infinite;
+  transform: rotate(188deg) translateX(202px);
+}
+
+@keyframes r-338 {
+  0% {
+    transform: rotate(188) translateX(202px);
+  }
+  100% {
+    transform: rotate(548deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(339) {
+  width: 3px;
+  height: 3px;
+  animation: r-339 17.6s linear infinite;
+  transform: rotate(188deg) translateX(192px);
+}
+
+@keyframes r-339 {
+  0% {
+    transform: rotate(188) translateX(192px);
+  }
+  100% {
+    transform: rotate(548deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(340) {
+  width: 4px;
+  height: 4px;
+  animation: r-340 19.2s linear infinite;
+  transform: rotate(123deg) translateX(192px);
+}
+
+@keyframes r-340 {
+  0% {
+    transform: rotate(123) translateX(192px);
+  }
+  100% {
+    transform: rotate(483deg) translateX(192px);
+  }
+}
+.asteroid:nth-child(341) {
+  width: 3px;
+  height: 3px;
+  animation: r-341 36.3s linear infinite;
+  transform: rotate(317deg) translateX(210px);
+}
+
+@keyframes r-341 {
+  0% {
+    transform: rotate(317) translateX(210px);
+  }
+  100% {
+    transform: rotate(677deg) translateX(210px);
+  }
+}
+.asteroid:nth-child(342) {
+  width: 4px;
+  height: 4px;
+  animation: r-342 32.7s linear infinite;
+  transform: rotate(243deg) translateX(202px);
+}
+
+@keyframes r-342 {
+  0% {
+    transform: rotate(243) translateX(202px);
+  }
+  100% {
+    transform: rotate(603deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(343) {
+  width: 3px;
+  height: 3px;
+  animation: r-343 31.9s linear infinite;
+  transform: rotate(82deg) translateX(200px);
+}
+
+@keyframes r-343 {
+  0% {
+    transform: rotate(82) translateX(200px);
+  }
+  100% {
+    transform: rotate(442deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(344) {
+  width: 4px;
+  height: 4px;
+  animation: r-344 32.2s linear infinite;
+  transform: rotate(8deg) translateX(194px);
+}
+
+@keyframes r-344 {
+  0% {
+    transform: rotate(8) translateX(194px);
+  }
+  100% {
+    transform: rotate(368deg) translateX(194px);
+  }
+}
+.asteroid:nth-child(345) {
+  width: 2px;
+  height: 2px;
+  animation: r-345 44.1s linear infinite;
+  transform: rotate(186deg) translateX(207px);
+}
+
+@keyframes r-345 {
+  0% {
+    transform: rotate(186) translateX(207px);
+  }
+  100% {
+    transform: rotate(546deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(346) {
+  width: 3px;
+  height: 3px;
+  animation: r-346 38.3s linear infinite;
+  transform: rotate(321deg) translateX(207px);
+}
+
+@keyframes r-346 {
+  0% {
+    transform: rotate(321) translateX(207px);
+  }
+  100% {
+    transform: rotate(681deg) translateX(207px);
+  }
+}
+.asteroid:nth-child(347) {
+  width: 2px;
+  height: 2px;
+  animation: r-347 26.8s linear infinite;
+  transform: rotate(321deg) translateX(203px);
+}
+
+@keyframes r-347 {
+  0% {
+    transform: rotate(321) translateX(203px);
+  }
+  100% {
+    transform: rotate(681deg) translateX(203px);
+  }
+}
+.asteroid:nth-child(348) {
+  width: 4px;
+  height: 4px;
+  animation: r-348 28.8s linear infinite;
+  transform: rotate(276deg) translateX(200px);
+}
+
+@keyframes r-348 {
+  0% {
+    transform: rotate(276) translateX(200px);
+  }
+  100% {
+    transform: rotate(636deg) translateX(200px);
+  }
+}
+.asteroid:nth-child(349) {
+  width: 3px;
+  height: 3px;
+  animation: r-349 35.2s linear infinite;
+  transform: rotate(253deg) translateX(202px);
+}
+
+@keyframes r-349 {
+  0% {
+    transform: rotate(253) translateX(202px);
+  }
+  100% {
+    transform: rotate(613deg) translateX(202px);
+  }
+}
+.asteroid:nth-child(350) {
+  width: 4px;
+  height: 4px;
+  animation: r-350 19.2s linear infinite;
+  transform: rotate(80deg) translateX(206px);
+}
+
+@keyframes r-350 {
+  0% {
+    transform: rotate(80) translateX(206px);
+  }
+  100% {
+    transform: rotate(440deg) translateX(206px);
   }
 }/*# sourceMappingURL=styles.css.map */
