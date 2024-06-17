@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         for (let i = 0; i < asteroidNumber; i++) {
             const asteroid = document.createElement('div');
-            asteroid.classList.add('asteroid');
+            asteroid.classList.add('a', `a${i}`);
             beltOrbit.appendChild(asteroid);
         }
     }

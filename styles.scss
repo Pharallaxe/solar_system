@@ -222,7 +222,6 @@ $planets: (
     (venus, 80px, 12px, #f5deb3, calc(var(--revolution-temps) * 2.5)), // 10s
     (earth, 120px, 14px, #3e82f7, calc(var(--revolution-temps) * 4)),  // 16s
     (mars, 160px, 10px, #d04b2d, calc(var(--revolution-temps) * 8)),   // 32s
-    (belt, 200px, 5px, #00a060, calc(var(--revolution-temps) * 25)),
     (jupiter, 280px, 30px, #f4a460, calc(var(--revolution-temps) * 49)), // 196s
     (saturn, 400px, 25px, #deb887, calc(var(--revolution-temps) * 122.5)), // 490s
     (uranus, 520px, 22px, #8a2be2, calc(var(--revolution-temps) * 345)), // 1380s
@@ -279,7 +278,7 @@ $planets: (
  - CEINTURE D'ASTÉROÏDES
 ****************************************/
 
-.asteroid {
+.a {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -295,18 +294,18 @@ $planets: (
     $center-distance: 200px;
     $range: 10px;
     $random-distance: $center-distance - $range + random($range * 2); // Distance aléatoire entre 190px et 210px
-    $random-duration: (150 + round(random(300))) * 0.1s;; // Durée aléatoire entre 10s et 40s
+    $random-duration: (150 + round(random(300))) * 0.2s;; // Durée aléatoire entre 10s et 40s
     $random-size: random(3) + 1px; // Taille aléatoire entre 1px et 3px
     $random-rotation: random(360); // Rotation initiale aléatoire entre 0° et 360°
     
-    .asteroid:nth-child(#{$i}) {
+    .a#{$i} {
         width: $random-size;
         height: $random-size;
-        animation: r-#{$i} $random-duration linear infinite;
+        animation: r#{$i} $random-duration linear infinite;
         transform: rotate(#{$random-rotation}deg) translateX($random-distance);
     }
 
-    @keyframes r-#{$i} {
+    @keyframes r#{$i} {
         0% {
             transform: rotate($random-rotation) translateX($random-distance);
         }
