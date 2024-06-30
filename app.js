@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const rapidityHtml = document.querySelector('label[for="rapidity"]');
 
     // Mettre à jour la variable CSS lorsque le slider change
-    slider.addEventListener('input', function() {
+    slider.addEventListener('input', function () {
         // Calculez la nouvelle durée en secondes
-        const newTime = `${10/this.value}s`;
+        const newTime = `${10 / this.value}s`;
         // Mettez à jour la variable CSS
         rootStyle.setProperty('--revolution-temps', newTime);
         rapidityHtml.innerText = `Rapidité (${this.value})`
@@ -53,14 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addAsteroidsToBelt(asteroidNumber) {
         const beltOrbit = document.querySelector('.orbit.belt-orbit');
-        
+
         for (let i = 0; i < asteroidNumber; i++) {
             const asteroid = document.createElement('div');
             asteroid.classList.add('a', `a${i}`);
             beltOrbit.appendChild(asteroid);
         }
     }
-    
+
     addAsteroidsToBelt(asteroidNumber);
 
 });

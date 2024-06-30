@@ -3,164 +3,163 @@
 ****************************************/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #111111;
-    font-family: Arial, sans-serif;
-    color: #aaa;
-    overflow: hidden;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111111;
+  font-family: Arial, sans-serif;
+  color: #aaa;
+  overflow: hidden;
 }
 
 /* Fenêtre de contrôle */
 .controls {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 60px;
-    width: 70px;
-    background: #111111;
-    border: 1px solid #e2e2e2;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    z-index: 10;
-    padding: 15px;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out, width 0.3s ease-in-out 0.3s;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 60px;
+  width: 70px;
+  background: #111111;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  padding: 15px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out 0.3s;
 
-    &.active {
-        height: 500px;
-        width: 200px;
-        transition: width 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
-    }
+  &.active {
+    height: 500px;
+    width: 200px;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
+  }
 }
 
 /* Styles de base pour le bouton hamburger */
 .hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    min-width: 40px;
-    height: 30px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    z-index: 20;
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-width: 40px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  z-index: 20;
 
-    .line {
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        transition: all 0.3s ease 0.6s;
-        position: absolute;
-        border-radius: 2px;
-    }
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease 0.6s;
+    position: absolute;
+    border-radius: 2px;
+  }
 
+  .line1 {
+    top: 0;
+  }
+
+  .line2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .line3 {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  &.active {
     .line1 {
-        top: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
     }
 
     .line2 {
-        top: 50%;
-        transform: translateY(-50%);
+      opacity: 0;
     }
 
     .line3 {
-        top: 100%;
-        transform: translateY(-100%);
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
     }
-
-    &.active {
-        .line1 {
-            top: 50%;
-            transform: translateY(-50%) rotate(45deg);
-        }
-
-        .line2 {
-            opacity: 0;
-        }
-
-        .line3 {
-            top: 50%;
-            transform: translateY(-50%) rotate(-45deg);
-        }
-    }
+  }
 }
 
 h2 {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 /* Alignement des étiquettes et des inputs */
 .group {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 5px;
-    border-bottom: dashed 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: dashed 1px;
 
-    &:first-of-type {
-        margin-bottom: 20px;
-        border-bottom: none;
-        padding: 0;
+  &:first-of-type {
+    margin-bottom: 20px;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  label {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  input[type="range"]
+  input[type="checkbox"] {
+    appearance: none; /* Supprime le style par défaut */
+    -webkit-appearance: none; /* Pour Safari/Chrome */
+    -moz-appearance: none; /* Pour Firefox */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #e2e2e2;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+
+    &:checked {
+      background-color: #111111;
     }
 
-    label {
-        flex: 1;
-        margin-right: 10px;
-        font-size: 20px;
+    &:checked::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-color: #e2e2e2;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-
-    input[type="range"]
-
-    input[type="checkbox"] {
-        appearance: none; /* Supprime le style par défaut */
-        -webkit-appearance: none; /* Pour Safari/Chrome */
-        -moz-appearance: none; /* Pour Firefox */
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        border: 2px solid #e2e2e2;
-        border-radius: 50%;
-        background-color: transparent;
-        position: relative;
-        display: inline-block;
-
-        &:checked {
-            background-color: #111111;
-        }
-    
-        &:checked::before {
-            content: '';
-            display: block;
-            width: 12px;
-            height: 12px;
-            background-color: #e2e2e2;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
+  }
 }
 
 .group-range {
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
 }
 
 /****************************************
@@ -168,9 +167,9 @@ h2 {
 ****************************************/
 
 .solar-system {
-    position: relative;
-    width: 600px;
-    height: 600px;
+  position: relative;
+  width: 600px;
+  height: 600px;
 }
 
 /****************************************
@@ -178,17 +177,17 @@ h2 {
 ****************************************/
 
 .sun, .orbit, .planet {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sun {
-    width: 50px;
-    height: 50px;
-    background-color: #FFA500;
+  width: 50px;
+  height: 50px;
+  background-color: #FFA500;
 }
 
 /****************************************
@@ -196,10 +195,10 @@ h2 {
 ****************************************/
 
 .orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 1px dashed rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
 }
 
 
@@ -208,69 +207,68 @@ h2 {
 ****************************************/
 
 .planet {
-    transform-origin: 0 0;
+  transform-origin: 0 0;
 }
 
 :root {
-    --revolution-temps: 4s;
+  --revolution-temps: 4s;
 }
 
 // Définir un tableau avec les propriétés des planètes
 $planets: (
-    //    planète,   orbite,   taille,     couleur,  rotation
-    (mercury, 40px, 6px, #aaa, calc(var(--revolution-temps) * 1)),   // 4s
-    (venus, 80px, 12px, #f5deb3, calc(var(--revolution-temps) * 2.5)), // 10s
-    (earth, 120px, 14px, #3e82f7, calc(var(--revolution-temps) * 4)),  // 16s
-    (mars, 160px, 10px, #d04b2d, calc(var(--revolution-temps) * 8)),   // 32s
-    (jupiter, 280px, 30px, #f4a460, calc(var(--revolution-temps) * 49)), // 196s
-    (saturn, 400px, 25px, #deb887, calc(var(--revolution-temps) * 122.5)), // 490s
-    (uranus, 520px, 22px, #8a2be2, calc(var(--revolution-temps) * 345)), // 1380s
-    (moon, 15px, 3px, #aaa, calc(var(--revolution-temps) * 0.5)),   // 2s
-    (io, 20px, 4px, #aaa, calc(var(--revolution-temps) * 0.5)),     // 2s
-    (europe, 30px, 6px, #aaa, calc(var(--revolution-temps) * 1)),   // 4s
-    (ganymede, 40px, 8px, #aaa, calc(var(--revolution-temps) * 1.75)), // 7s
-    (callisto, 48px, 4px, #aaa, calc(var(--revolution-temps) * 2.75))  // 11s
+  //    planète,   orbite,   taille,     couleur,  rotation
+                (mercury, 40px, 6px, #aaa, calc(var(--revolution-temps) * 1)), // 4s
+                (venus, 80px, 12px, #f5deb3, calc(var(--revolution-temps) * 2.5)), // 10s
+                (earth, 120px, 14px, #3e82f7, calc(var(--revolution-temps) * 4)), // 16s
+                (mars, 160px, 10px, #d04b2d, calc(var(--revolution-temps) * 8)), // 32s
+                (jupiter, 280px, 30px, #f4a460, calc(var(--revolution-temps) * 49)), // 196s
+                (saturn, 400px, 25px, #deb887, calc(var(--revolution-temps) * 122.5)), // 490s
+                (uranus, 520px, 22px, #8a2be2, calc(var(--revolution-temps) * 345)), // 1380s
+                (moon, 15px, 3px, #aaa, calc(var(--revolution-temps) * 0.5)), // 2s
+                (io, 20px, 4px, #aaa, calc(var(--revolution-temps) * 0.5)), // 2s
+                (europe, 30px, 6px, #aaa, calc(var(--revolution-temps) * 1)), // 4s
+                (ganymede, 40px, 8px, #aaa, calc(var(--revolution-temps) * 1.75)), // 7s
+                (callisto, 48px, 4px, #aaa, calc(var(--revolution-temps) * 2.75)) // 11s
 );
 
 // Générer les styles pour chaque planète
 @each $planet in $planets {
-    $name: nth($planet, 1);
-    $orbite : nth($planet, 2);
-    $size: nth($planet, 3);
-    $color: nth($planet, 4);
-    $duration: nth($planet, 5);
+  $name: nth($planet, 1);
+  $orbite: nth($planet, 2);
+  $size: nth($planet, 3);
+  $color: nth($planet, 4);
+  $duration: nth($planet, 5);
 
-    .#{$name}-orbit {
-        width: calc($orbite * 2);
-        height: calc($orbite * 2);
+  .#{$name}-orbit {
+    width: calc($orbite * 2);
+    height: calc($orbite * 2);
+  }
+
+  .#{$name} {
+    width: $size;
+    height: $size;
+    background-color: $color;
+    animation: rotate-#{$name} $duration linear infinite;
+  }
+
+
+  @keyframes rotate-#{$name} {
+    0% {
+      transform: rotate(0deg) translateX(calc($orbite - 50%));
     }
-
-    .#{$name} {
-        width: $size;
-        height: $size;
-        background-color: $color;
-        animation: rotate-#{$name} $duration linear infinite;
+    25% {
+      transform: rotate(90deg) translateX(calc($orbite - 50%));
     }
-
-
-
-    @keyframes rotate-#{$name} {
-        0% {
-            transform: rotate(0deg) translateX(calc($orbite - 50%));
-        }
-        25% {
-            transform: rotate(90deg) translateX(calc($orbite - 50%));
-        }
-        50% {
-            transform: rotate(180deg) translateX(calc($orbite - 50%));
-        }
-        75% {
-            transform: rotate(270deg) translateX(calc($orbite - 50%));
-        }
-        100% {
-            transform: rotate(360deg) translateX(calc($orbite - 50%));
-        }
+    50% {
+      transform: rotate(180deg) translateX(calc($orbite - 50%));
     }
+    75% {
+      transform: rotate(270deg) translateX(calc($orbite - 50%));
+    }
+    100% {
+      transform: rotate(360deg) translateX(calc($orbite - 50%));
+    }
+  }
 }
 
 
@@ -279,38 +277,38 @@ $planets: (
 ****************************************/
 
 .a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px; // taille d'un astéroïde
-    height: 2px;
-    background-color: #ccc;
-    border-radius: 50%;
-    transform-origin: 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px; // taille d'un astéroïde
+  height: 2px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transform-origin: 0 0;
 }
 
 
 @for $i from 1 through 350 {
-    $center-distance: 200px;
-    $range: 10px;
-    $random-distance: $center-distance - $range + random($range * 2); // Distance aléatoire entre 190px et 210px
-    $random-duration: (150 + round(random(300))) * 0.2s;; // Durée aléatoire entre 10s et 40s
-    $random-size: random(3) + 1px; // Taille aléatoire entre 1px et 3px
-    $random-rotation: random(360); // Rotation initiale aléatoire entre 0° et 360°
-    
-    .a#{$i} {
-        width: $random-size;
-        height: $random-size;
-        animation: r#{$i} $random-duration linear infinite;
-        transform: rotate(#{$random-rotation}deg) translateX($random-distance);
-    }
+  $center-distance: 200px;
+  $range: 10px;
+  $random-distance: $center-distance - $range + random($range * 2); // Distance aléatoire entre 190px et 210px
+  $random-duration: (150 + round(random(300))) * 0.2s;; // Durée aléatoire entre 10s et 40s
+  $random-size: random(3) + 1px; // Taille aléatoire entre 1px et 3px
+  $random-rotation: random(360); // Rotation initiale aléatoire entre 0° et 360°
 
-    @keyframes r#{$i} {
-        0% {
-            transform: rotate($random-rotation) translateX($random-distance);
-        }
-        100% {
-            transform: rotate(#{calc($random-rotation + 360)}deg) translateX($random-distance);
-        }
+  .a#{$i} {
+    width: $random-size;
+    height: $random-size;
+    animation: r#{$i} $random-duration linear infinite;
+    transform: rotate(#{$random-rotation}deg) translateX($random-distance);
+  }
+
+  @keyframes r#{$i} {
+    0% {
+      transform: rotate($random-rotation) translateX($random-distance);
     }
+    100% {
+      transform: rotate(#{calc($random-rotation + 360)}deg) translateX($random-distance);
+    }
+  }
 }
