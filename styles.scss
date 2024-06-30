@@ -123,7 +123,7 @@ h2 {
     font-size: 20px;
   }
 
-  input[type="range"]
+  input[type="range"],
   input[type="checkbox"] {
     appearance: none; /* Supprime le style par défaut */
     -webkit-appearance: none; /* Pour Safari/Chrome */
@@ -305,7 +305,7 @@ $planets: (
 
   @keyframes r#{$i} {
     0% {
-      transform: rotate($random-rotation) translateX($random-distance);
+      transform: rotate(#{$random-rotation}deg) translateX($random-distance);
     }
     100% {
       transform: rotate(#{calc($random-rotation + 360)}deg) translateX($random-distance);
